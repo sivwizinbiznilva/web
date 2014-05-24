@@ -2,6 +2,7 @@
 ![isn't she cute](stephthecutie.jpg)
 
 ## Parser test:
+
 ```javascript
 function syntaxHighlighting() {
   var n = 33;
@@ -16,8 +17,11 @@ function syntaxHighlighting() {
     * ~~strikethrough~~
 * `inline code`
 
+Some text
+
 1. Numbered list
 2. [Link](https://www.google.com)
+3. Another
 
 
 An image: ![Markdown Here
@@ -26,8 +30,7 @@ logo](http://adam-p.github.io/markdown-here/img/icon24.png)
 > Block quote. 
 > *With* **some** `markdown`.
 
-If **TeX Math** support is enabled, this is the quadratic equation: 
-$-b \pm \sqrt{b^2 - 4ac} \over 2a$
+If **TeX Math** support is enabled, this is the quadratic equation:\\(-b \pm \sqrt{b^2 - 4ac} \over 2a\\)
 
 # Header 1
 ## Header 2
