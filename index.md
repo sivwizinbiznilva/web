@@ -30,7 +30,9 @@ logo](http://adam-p.github.io/markdown-here/img/icon24.png)
 > Block quote. 
 > *With* **some** `markdown`.
 
-If **TeX Math** support is enabled, this is the quadratic equation:\\(-b \pm \sqrt{b^2 - 4ac} \over 2a\\)
+If **TeX Math** support is enabled, this is the quadratic equation: 
+
+$$-b \pm \sqrt{b^2 - 4ac} \over 2a$$
 
 # Header 1
 ## Header 2
@@ -40,7 +42,7 @@ If **TeX Math** support is enabled, this is the quadratic equation:\\(-b \pm \sq
 ###### Header 6
  
 | Tables | Are | Cool |
-| ------------- |:-------------:| -----:|
+| :---------: | :---------: | :---------: |
 | column 3 is | right-aligned | $1600 |
 | column 2 is | centered | $12 |
 | zebra stripes | are neat | $1 |
