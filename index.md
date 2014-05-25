@@ -1,7 +1,6 @@
-#Steph sure is a cutie!
 ![isn't she cute](stephthecutie.jpg)
 
-## Parser test:
+# Parser test:
 
 ```javascript
 function syntaxHighlighting() {
