@@ -11,6 +11,12 @@ function syntaxHighlighting() {
 }
 ```
 
+some text
+
+```vhdl
+a <= b + c;
+```
+
 * plain
 * *emphasis*
   * **strong emphasis**
