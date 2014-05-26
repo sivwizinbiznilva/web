@@ -18,8 +18,8 @@ a <= b + c;
 
 * plain
 * *emphasis*
-  * **strong emphasis**
-    * ~~strikethrough~~
+* **strong emphasis**
+* ~~strikethrough~~
 * `inline code`
 
 Some text
