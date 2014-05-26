@@ -29,4 +29,8 @@ $ git clone http://github.com/sivwizinbiznilva/dotfiles
 12. Clone build script
 13. cd into build script dir
 14. npm install ejs, highlight.js, path, marked
-
+15. don't forget:
+```bash
+alias "buildweb"="cd ~/github/course-build/; node build.js
+/Users/Silva/github/web /Users/Silva/github/web/template.ejs Hippo!"
+```
