@@ -10,7 +10,7 @@ function syntaxHighlighting() {
 }
 ```
 
-some text
+I think this will work...maybe
 
 ```vhdl
 a <= b + c;
