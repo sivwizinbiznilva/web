@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hippo!</title>
+        <meta name="description" content="Ryan Silva's Lab Work">
+        <meta name="author" content="Ryan Silva, Branched from Todd Branchflower">
+        <link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+        <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+	<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],
+		                  ['\\(','\\)']]}});
+	 </script>
+	<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+         </script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar navbar-inverse">
+                <div class = "navbar-inner">
+                    <a class = "brand" href="/index.html">AVLIS</a>
+                    <ul class = "nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/setup/index.html">Setup</a></li>
+                        <li><a href="/lab/index.html">Lab Work</a></li>
+                        <li><a href="/admin/index.html">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1 id="so-you-bought-a-new-computer-">So you bought a new computer?</h1>
+<ol>
+<li>Download and install Xcode from App Store</li>
+<li>Install Iterm2<ul>
+<li>Modify keybindings for i3-like experience</li>
+</ul>
+</li>
+<li>Install shiftit or amethyst</li>
+<li>Remap caps lock to escape using pckeyboardhack<ul>
+<li>change from 51 to 53</li>
+</ul>
+</li>
+<li>Install <a href="http://brew.sh/">homebrew</a></li>
+<li>Install <a href="https://coderwall.com/p/dgwwuq">nginx</a><pre><code class="lang-bash"><span class="hljs-variable">$ </span>brew install nginx
+</code></pre>
+Then start nginx<pre><code class="lang-bash">$ <span class="hljs-built_in">sudo</span> nginx
+</code></pre>
+</li>
+<li>Get <a href="http://nodejs.org/download/">node.js</a></li>
+<li>Clone your dotfiles<pre><code class="lang-bash"><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/github.com/sivwizinbiznilva</span><span class="hljs-regexp">/dotfiles</span>
+</code></pre>
+</li>
+<li>Move your dotfiles into ~/.dotfiles</li>
+<li>Setup symlinks</li>
+<li>Git clone vundle</li>
+<li>Install LaTeX</li>
+<li>Clone vimfiles</li>
+<li>Clone Silva (vimrc, vimperatorrc)</li>
+<li>Clone build script</li>
+<li>cd into build script dir</li>
+<li>npm install ejs, highlight.js, path, marked</li>
+<li>don&#39;t forget:<pre><code class="lang-bash"><span class="hljs-keyword">alias</span> <span class="hljs-string">"buildweb"</span>=<span class="hljs-string">"cd ~/github/course-build/; node build.js /Users/Silva/github/web /Users/Silva/github/web/template.ejs Hippo!"</span>
+</code></pre>
+</li>
+</ol>
+
+        </div>
+    </body>
+</html>

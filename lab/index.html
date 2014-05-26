@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hippo! - Embedded Systems II with the Digilent Atlys</title>
+        <meta name="description" content="Ryan Silva's Lab Work">
+        <meta name="author" content="Ryan Silva, Branched from Todd Branchflower">
+        <link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+        <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+	<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],
+		                  ['\\(','\\)']]}});
+	 </script>
+	<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+         </script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar navbar-inverse">
+                <div class = "navbar-inner">
+                    <a class = "brand" href="/index.html">AVLIS</a>
+                    <ul class = "nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/setup/index.html">Setup</a></li>
+                        <li><a href="/lab/index.html">Lab Work</a></li>
+                        <li><a href="/admin/index.html">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1 id="ryan-silva-s-lab-log">Ryan Silva&#39;s Lab Log</h1>
+<p><strong>Suggestion?  The source behind this site is available on Github: <a href="https://github.com/sivwizinbiznilva/web/issues">file a bug report or send me a pull request!</a></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Date</th>
+<th style="text-align:center">Articles</th>
+<th style="text-align:center">Notes</th>
+<th style="text-align:center">Milestones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="/notes/L1/index.html">L1</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L1">Intro to Digital System Design</a></td>
+<td style="text-align:center"><a href="/notes/L1/L1_HW.html">L1 Assignment</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L2/index.html">L2</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L2">HDL Overview</a></td>
+<td style="text-align:center"><a href="/notes/L2/L2_HW.html">L2 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L1/L1_HW.html">L1 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L3/index.html">L3</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L3">Basic Language Constructs of VHDL</a></td>
+<td style="text-align:center"><a href="/notes/L3/L3_HW.html">L3 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L2/L2_HW.html">L2 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L4/index.html">L4</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L4">Combinational Circuits in VHDL</a></td>
+<td style="text-align:center"><a href="/notes/L4/L4_HW.html">L4 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L3/L3_HW.html">L3 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L5/index.html">L5</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L5">Sequential Circuits in VHDL</a></td>
+<td style="text-align:center"><a href="/notes/L5/L5_HW.html">L5 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L4/L4_HW.html">L4 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L6/index.html">L6</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L6">Writing VHDL Test Benches</a></td>
+<td style="text-align:center"><a href="/notes/L6/L6_HW.html">L6 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L5/L5_HW.html">L5 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L7/index.html">L7</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L7">Hierarchical and Testable Design in VHDL</a></td>
+<td style="text-align:center"><a href="/notes/L7/L7_HW.html">L7 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L6/L6_HW.html">L6 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L8/index.html">L8</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L8">Finite State Machines</a></td>
+<td style="text-align:center"><a href="/notes/L8/L8_HW.html">L8 Assignment</a>, <a href="/labs/lab1">Lab 1</a> Prelab</td>
+<td style="text-align:center"><a href="/notes/L7/L7_HW.html">L7 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center">L9</td>
+<td style="text-align:center"><a href="/labs/lab1">Lab 1 - VGA Synchronization</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/notes/L8/L8_HW.html">L8 Assignment</a>, <a href="/labs/lab1">Lab 1</a> Prelab</td>
+</tr>
+<tr>
+<td style="text-align:center">L10</td>
+<td style="text-align:center"><a href="/labs/lab1">Lab 1 - VGA Synchronization</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L11</td>
+<td style="text-align:center"><a href="/labs/lab1">Lab 1 - VGA Synchronization</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab1">Lab 1</a> Functionality</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L12/index.html">L12</a></td>
+<td style="text-align:center">VGA Review, Pong Introduction</td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2</a> Prelab</td>
+<td style="text-align:center"><a href="/labs/lab1">Lab 1</a> Writeup</td>
+</tr>
+<tr>
+<td style="text-align:center">L13</td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2 - Pong</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2</a> Prelab</td>
+</tr>
+<tr>
+<td style="text-align:center">L14</td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2 - Pong</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L15</td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2 - Pong</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2</a> Functionality</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L16">L16</a></td>
+<td style="text-align:center">Pong Review, Font Controller Introduction</td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3</a> Prelab</td>
+<td style="text-align:center"><a href="/labs/lab2">Lab 2</a> Writeup</td>
+</tr>
+<tr>
+<td style="text-align:center">L17</td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3 - Font Controller</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3</a> Prelab</td>
+</tr>
+<tr>
+<td style="text-align:center">L18</td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3 - Font Controller</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L19</td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3 - Font Controller</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3</a> Functionality</td>
+</tr>
+<tr>
+<td style="text-align:center">L20</td>
+<td style="text-align:center">GR #1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab3">Lab 3</a> Writeup</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L21">L21</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L21">PicoBlaze and HW/SW Partitioning</a></td>
+<td style="text-align:center"><a href="/notes/L21/L21_HW.html">L21 Assignment</a></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L22">L22</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L22">FPGA Design for Area, Power, or Speed</a></td>
+<td style="text-align:center"><a href="/notes/L22/L22_HW.html">L22 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L21/L21_HW.html">L21 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center">L23</td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4a - Remote Terminal (PicoBlaze)</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/notes/L22/L22_HW.html">L22 Assignment</a>, <a href="/labs/lab4">Lab 4a</a> Prelab</td>
+</tr>
+<tr>
+<td style="text-align:center">L24</td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4a - Remote Terminal (PicoBlaze)</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4a</a> Functionality</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L25">L25</a></td>
+<td style="text-align:center"><a href="/datasheets/microblaze_tutorial.html">MicroBlaze Introduction</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L26</td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4b - Remote Terminal (MicroBlaze)</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4b</a> Prelab</td>
+</tr>
+<tr>
+<td style="text-align:center">L27</td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4b - Remote Terminal (MicroBlaze)</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L28</td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4b - Remote Terminal (MicroBlaze)</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/labs/lab4">Lab 4b</a> Functionality</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L29/index.html">L29</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L29">Register Transfer Methodology</a></td>
+<td style="text-align:center"><a href="/notes/L29/L29_HW.html">L29 Assignment</a></td>
+<td style="text-align:center">Lab 4 Writeup</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L30/index.html">L30</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L30">Timing Analysis</a></td>
+<td style="text-align:center"><a href="/notes/L30/L30_HW.html">L30 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L29/L29_HW.html">L29 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/notes/L31/index.html">L31</a></td>
+<td style="text-align:center"><a href="http://slides.ECE383.com/ECE383_slides/L31">Clock and Synchronization</a></td>
+<td style="text-align:center"><a href="/notes/L31/L31_HW.html">L31 Assignment</a></td>
+<td style="text-align:center"><a href="/notes/L30/L30_HW.html">L30 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center">L32</td>
+<td style="text-align:center">GR #2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/notes/L31/L31_HW.html">L31 Assignment</a></td>
+</tr>
+<tr>
+<td style="text-align:center">L33</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L34</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L35</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L36</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L37</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L38</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L39</td>
+<td style="text-align:center"><a href="/labs/lab5">Lab 5 - Final Project</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L40</td>
+<td style="text-align:center">Final Presentation</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+    </body>
+</html>
