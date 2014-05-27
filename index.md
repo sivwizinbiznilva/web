@@ -2,6 +2,17 @@
 
 # Parser test:
 
+```tex
+\setlength{\parskip}{1.2ex}	   % space between paragraphs
+\setlength{\parindent}{2em}	   % amount of indention
+\setlength{\textwidth}{175cm}	   % default = 6.5"
+\setlength{\oddsidemargin}{-5mm}   % default = 0"
+\setlength{\textheight}{225mm}	   % default = 9"
+\setlength{\topmargin}{-12mm}	   % default = 0"
+```
+
+some more text
+
 ```javascript
 function syntaxHighlighting() {
   var n = 33;
@@ -10,10 +21,13 @@ function syntaxHighlighting() {
 }
 ```
 
-I think this will work...maybe
+it's not working
 
 ```vhdl
-a <= b + c;
+process(a,b,c)
+begin
+	a <= b + c;
+end process;
 ```
 
 * plain

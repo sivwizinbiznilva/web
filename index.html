@@ -13,6 +13,9 @@
 	<script type="text/javascript"
 		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
          </script>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+	<script src="/Users/Silva/github/course-build/node_modules/highlight.js/lib/highlight.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <div class = "container">
@@ -29,13 +32,23 @@
             </div>
             <p><img src="stephthecutie.jpg" alt="isn&#39;t she cute...SO CUTE!"></p>
 <h1>Parser test:</h1>
+<pre><code class="lang-tex">\setlength<span class="hljs-cell">{\parskip}</span><span class="hljs-cell">{<span class="hljs-number">1.2</span>ex}</span>       <span class="hljs-comment">% space between paragraphs</span>
+\setlength<span class="hljs-cell">{\parindent}</span><span class="hljs-cell">{<span class="hljs-number">2</span>em}</span>       <span class="hljs-comment">% amount of indention</span>
+\setlength<span class="hljs-cell">{\textwidth}</span><span class="hljs-cell">{<span class="hljs-number">175</span>cm}</span>       <span class="hljs-comment">% default = 6.5"</span>
+\setlength<span class="hljs-cell">{\oddsidemargin}</span><span class="hljs-cell">{-<span class="hljs-number">5</span>mm}</span>   <span class="hljs-comment">% default = 0"</span>
+\setlength<span class="hljs-cell">{\textheight}</span><span class="hljs-cell">{<span class="hljs-number">225</span>mm}</span>       <span class="hljs-comment">% default = 9"</span>
+\setlength<span class="hljs-cell">{\topmargin}</span><span class="hljs-cell">{-<span class="hljs-number">12</span>mm}</span>       <span class="hljs-comment">% default = 0"</span></code></pre>
+<p>some more text</p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">syntaxHighlighting</span><span class="hljs-params">()</span> {</span>
   <span class="hljs-keyword">var</span> n = <span class="hljs-number">33</span>;
   <span class="hljs-keyword">var</span> s = <span class="hljs-string">"hello, ccc+c!c/"</span>;
   console.log(s);
 }</code></pre>
-<p>I think this will work...maybe</p>
-<pre><code class="lang-vhdl"><span class="hljs-attribute">a &lt;</span>=<span class="hljs-string"> b + c;</span></code></pre>
+<p>it&#39;s not working</p>
+<pre><code class="lang-vhdl">process(a,b,c)
+<span class="hljs-operator"><span class="hljs-keyword">begin</span>
+    a &lt;= b + c;</span>
+<span class="hljs-operator"><span class="hljs-keyword">end</span> process;</span></code></pre>
 <ul>
 <li>plain</li>
 <li><em>emphasis</em></li>
