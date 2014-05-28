@@ -2,7 +2,7 @@
 
 # Parser test:
 
-```tex
+```TeX
 \setlength{\parskip}{1.2ex}	   % space between paragraphs
 \setlength{\parindent}{2em}	   % amount of indention
 \setlength{\textwidth}{175cm}	   % default = 6.5"
@@ -23,10 +23,11 @@ function syntaxHighlighting() {
 
 it's not working
 
-```vhdl
+```VHDL
 process(a,b,c)
+blah : std_logic_vector(3 downto 0);
 begin
-	a <= b + c;
+	a <= b and c;
 end process;
 ```
 
