@@ -8,3 +8,4 @@ title = 'Lab Log'
 | :-: | :-: | :-: | :-: | :-: |
 | April 2014 | [The Idea](http://slides.ryanjsilva.com/slides/idea) | [April Notes](/notes/April2014.html) | - |
 | May 2014 | [The Plan](http://slides.ryanjsilva.com/slides/plan) | [May Notes](/notes/May2014.html) | - |
+| June 2014 | - | [June Notes](/notes/June2014.html)| - |
