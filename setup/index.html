@@ -60,6 +60,8 @@ Then start nginx<pre><code class="lang-bash">$ <span class="hljs-built_in">sudo<
 <li>npm install ejs, highlight.js, path, marked</li>
 <li>don&#39;t forget:<pre><code class="lang-bash"><span class="hljs-keyword">alias</span> <span class="hljs-string">"buildweb"</span>=<span class="hljs-string">"cd ~/github/course-build/; node build.js /Users/Silva/github/web /Users/Silva/github/web/template.ejs Hippo!"</span></code></pre>
 </li>
+<li>If you copy your key, you must <a href="http://askubuntu.com/questions/134975/copy-ssh-private-keys-to-another-computer">change the ownership</a><pre><code class="lang-bash"><span class="hljs-keyword">chown</span> <span class="hljs-variable">*user</span>:group* ~<span class="hljs-regexp">/.ssh/id</span>_rsa*</code></pre>
+</li>
 </ol>
 
         </div>

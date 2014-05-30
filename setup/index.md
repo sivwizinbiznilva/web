@@ -33,3 +33,7 @@ $ git clone http://github.com/sivwizinbiznilva/dotfiles
 ```bash
 alias "buildweb"="cd ~/github/course-build/; node build.js /Users/Silva/github/web /Users/Silva/github/web/template.ejs Hippo!"
 ```
+1. If you copy your key, you must [change the ownership](http://askubuntu.com/questions/134975/copy-ssh-private-keys-to-another-computer)
+```bash
+chown *user:group* ~/.ssh/id_rsa*
+```
