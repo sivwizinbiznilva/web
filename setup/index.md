@@ -1,4 +1,5 @@
 # So you bought a new computer?
+### Is it OSX?
 
 1. Download and install Xcode from App Store
 2. Install Iterm2
@@ -37,3 +38,6 @@ alias "buildweb"="cd ~/github/course-build/; node build.js /Users/Silva/github/w
 ```bash
 chown *user:group* ~/.ssh/id_rsa*
 ```
+
+### Or is it Ubuntu 13.04?
+1. Install [Nodejs](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
