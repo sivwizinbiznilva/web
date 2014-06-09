@@ -1,4 +1,4 @@
-![isn't she cute...SO CUTE!](stephthecutie.jpg)
+![picture won't show?](stephthecutie.jpg)
 
 # Parser test:
 
