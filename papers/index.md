@@ -18,4 +18,4 @@
 
 - [Combining microfluidics and synthetic biology](/papers/Microfluidics_and_SynBio.pdf)
 
-- [Sensors for Micro Bio Robots via Synthetic Biology](/papers/uBioRobotics.pdf)
+- [Sensors for Micro Bio Robots via Synthetic Biology](/papers/uBioRobots.pdf)
