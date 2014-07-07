@@ -41,3 +41,6 @@ chown *user:group* ~/.ssh/id_rsa*
 
 ### Or is it Ubuntu 13.04?
 1. Install [Nodejs](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+
+### Or is it Arch?
+1. Clear your calendar (BUT IT'S SO NIMBLE!!!!)
