@@ -1,0 +1,6 @@
+# Here's what I'm thinking I'll need:
+
+1. Atlas-Scientific pH Kit
+ - Why: Interfaces directly with an Arduino! (<--Holy cow!)
+ - Price: $105.95
+ - Direct Link: https://www.atlas-scientific.com/product_pages/kits/ph-kit.html
