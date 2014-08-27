@@ -42,3 +42,12 @@
 	  > not only has excellent ph sensing properties but is also
 	  > chemically inert in most acidic and basic solutions with the exception of
 	  > hydrofluoric acid based solutions
+
+# Lunch With Cassie
+- Problem: Why are we trying to use biology to do computation? Why even have
+  logic in bacteria?
+- Answer (?): Perhaps we can use an array of biological sensors that can
+  compute one output, which can then be read by a electrochemical transducer. I
+think the biggest, literally in terms of size, problem with the current
+biological sensor design is the size of the electrochemical transducer. Having
+only one electrochemical transducer seems, to me, like a big win.
