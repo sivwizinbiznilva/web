@@ -19,6 +19,10 @@
 ![Cocktail Napkin Sketch](WirelessBacteria_Napkin.jpeg)
 
 # Silicon Nanowire Paper Notes:
++ Q: What does this technology look like:
++ A: This
+![Nanowire Layout](nanowire_layout.gif)
+
 + Q: What makes this technology novel?
 	+ ISFETs (Ion-Sensitive FETs are not a new concept)
 + A: 
