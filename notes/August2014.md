@@ -37,7 +37,7 @@
 
 	- So the novel idea appears to be using a ```bilayer SiO2/HfO2```
 	  dielectric stack
-		> where the HfO2 layer is the sensing surface in concact with
+		> where the HfO2 (Halfnium Oxide) layer is the sensing surface in concact with
 		> the buffer solution and the SiO2 forms the interfacial layer
 		> at the silicon channel. Using HfO2 as the sensing surface has
 		> an important advantage over SiO2: pH sensitivity is higher
