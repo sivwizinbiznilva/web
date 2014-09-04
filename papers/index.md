@@ -26,3 +26,18 @@
 - [Combining microfluidics and synthetic biology](/papers/Microfluidics_and_SynBio.pdf)
 
 - [Sensors for Micro Bio Robots via Synthetic Biology](/papers/uBioRobots.pdf)
+
+- [Microfluidic Large-Scale Integration](/papers/thorsen2002.pdf)
+	- Review paper for the state of the microfluidic art in 2002
+	- > A key component of these networks is the fluidic multiplexor, which
+	  > is a combinatorial array of binary valve patterns that exponentially
+	  > increases the processing power of a network by allowing complex
+	  > fluid manipulations with a minimal number of inputs.
+
+![Microfluidic Multiplexor!](mux.png)
+
+> On the basis of the utility of these examples, we believe that
+> other concepts developed for electronic integrated circuits can be
+> usefully transferred to chemical and biochemical analysis and processing in
+> microfluidic devices
+
