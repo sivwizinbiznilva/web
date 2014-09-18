@@ -170,6 +170,46 @@
 <p>A second difference between electronic CAD and microfulidic CAD is the fast turn-around time in manufacturing microfluidic chips.</p>
 </blockquote>
 <p>I argue that prototyping using FPGAs is significantly faster than manufacturing microfluidic chips.</p>
+<h3><a href="/papers/Recent_uF_Developments.pdf">Recent developments in microfluidic large scale integration</a></h3>
+<ul>
+<li>A programmable uF platform has kind-of been investigated, albeit just for mixing and processing via fluorescent derivatization.<ul>
+<li><a href="/papers/Programmable_uF_automaton.pdf">Digitally programmable microfluidic automaton for multiscale combinatorial mixing and sample processing</a><ul>
+<li>The review paper quotes the shortcomings of the device as: <blockquote>
+<p>larger hybrid PDMS/glass valve technology differentiates itself from mLSI and is more suitable for microliter scale fluid volue processing (the chamber volume is 120 nL); moreover this technology requires one external valve per chamber and it seems unlikely that any reduction is possible</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>On second glance, an FPGA-like uF platform has been done...damn:<ul>
+<li><a href="/papers/FPGA_uF.pdf">A software-programmable microfluidic device for automated biology</a></li>
+</ul>
+</li>
+<li>And again...This time using a combination of flow based and electrowetting-enabled droplet based uF<ul>
+<li><a href="/papers/Programmable_electrowetting_uF.pdf">A programmable droplet-based microfluidic device applied to a multiparameter analysis of single microbes and microbial communities</a><blockquote>
+<p>This is largely due to the prevailing para-digm in microfluidic research in which devices areb hardwiredb  for specific fluid handling tasks, necessitating a customized design for each application or change in protocol. This application-spe-cific approach requires iterative cycles of device design, fabrica-tion, and testing, presenting a major obstacle to the development of new applications and limiting user adoption and community access. In analogy to how programmable integrated circuits en-abled a broader community of developers and nonexpert users,the advancement of programmable microfluidic devices standsto dramatically enhance the pervasiveness and impact of micro-fluidic systems (15)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>Idea</strong>: what if you combine MHDL with an actual chip by building a Place-and-Router?<ul>
+<li>or what if you built a programmable mLSI chip that could be addressed by MHDL, or a subset thereof?</li>
+</ul>
+</li>
+<li><strong>This doesn&#39;t seem to have been investigated!</strong><ul>
+<li>The electrowetting device uses a LABVIEW program to control the chip<ul>
+<li><a href="Methods_ProgramElectrouF.pdf">Methods used to make device</a></li>
+</ul>
+</li>
+<li>The claimed FPGA-like devices uses Visual Basic to address the solenoid elements</li>
+</ul>
+</li>
+<li>The evolution of the FPGA began with the HDL, not the other way around...right?<h3>Microfluidic Hardware Description Language (MHDL)</h3>
+</li>
+<li>MHDL is a specification language for mLSI chip architectures, as opposed to assay specification. An assay specification language compatible with MHDL is<br>Biocoder as shown in this paper: <a href="/papers/MHDL_Synth.pdf">Automatic Synthesis of Microfluidic Large Scale Integration Chips from a Domain-Specific Language</a></li>
+<li>Introduced here: <a href="/papers/MHDL.pdf">Design and Verification Tools for Continuous Fluid Flow-based Microfluidic Devices</a></li>
+</ul>
 
         </div>
     </body>
