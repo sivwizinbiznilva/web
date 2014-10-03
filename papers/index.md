@@ -137,3 +137,10 @@ I argue that prototyping using FPGAs is significantly faster than manufacturing 
 Biocoder as shown in this paper: [Automatic Synthesis of Microfluidic Large Scale Integration Chips from a Domain-Specific Language](/papers/MHDL_Synth.pdf)
 - Introduced here: [Design and Verification Tools for Continuous Fluid Flow-based Microfluidic Devices](/papers/MHDL.pdf)
 
+#Characterization
+###[Optogenetic characterization methods overcome key challenges in synthetic and systems biology](/papers/Tabor_OptoChar.pdf)
+>Component signal processing properties, such as the relative amplitude (gain) and time delay of output relative to input for various signals, are captured using **phenomenological**, or 'black box' mathematical models. The models are used to reliably assemble components into circuits with more advanced capabilities, such as band-pass filters or amplifiers, and eventually into complete systems, such as computers or radios
+
+- i.e. Derive models from experimentation, NOT FROM BIOLOGICAL THEORY!
+
+>Given sufficient measurements, one should be able to formulate a mathematical model that accurately predicts receptor outputs for input signals that have not been tested. Because the only purpose of the model is to predict receptor I/O, a black-box model will typically be preferred over a more complicated version reflecting the receptor molecular biology. Once it is parameterized with experimental data, the model can be used to simulate the receptor response to a wide range of different inputs in silico, thus enabling the computational design of effector signals capable of driving biological signals with desired quantitative and temporal features and satisfying challenge two. Additionally, if receptor outputs can be measured using fluorescent proteins in real time, an in silico feedback controller can adjust the designed input signal to account for any deviations from the model prediction
