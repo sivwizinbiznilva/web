@@ -2,7 +2,7 @@
 
 ![pH Response](pHResponse_pH6to8.png)
 
-#### [Development of a novel biosensor for the detection of arsenic in drinking water](/papers/Edinburgh_Development_arsenic_drinking_water.pdf)
+#### [Development of a nir fovel biosensor for the detection of arsenic in drinking water](/papers/Edinburgh_Development_arsenic_drinking_water.pdf)
 - World Health Organization recommended limit is 10 ppb or [10 $\mu$g/litre](http://www.who.int/mediacentre/factsheets/fs372/en/)
 - Sensor can detect 5 ppb, albeit with a caveat
  - You must wait 500 minutes before the Output Dynamic Range between 0ppb and 5ppb goes above .1pH
@@ -147,3 +147,9 @@ Biocoder as shown in this paper: [Automatic Synthesis of Microfluidic Large Scal
 
 
 ##[Evolution Paper](/papers/Evolution.pdf)
+
+##[Synthetic Biology and the Art of BioSensor Design](/papers/ApplicationsSynBio.pdf)
+
+##[Biosensor for Direct Determination of Organophosphate Nerve Agents using Recombinant E.Coli](http://pubs.acs.org/doi/full/10.1021/ac9805201)
+
+![Experimental Setup](/papers/experimental_setup.gif)
