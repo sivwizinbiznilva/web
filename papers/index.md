@@ -153,3 +153,18 @@ Biocoder as shown in this paper: [Automatic Synthesis of Microfluidic Large Scal
 ##[Biosensor for Direct Determination of Organophosphate Nerve Agents using Recombinant E.Coli](http://pubs.acs.org/doi/full/10.1021/ac9805201)
 
 ![Experimental Setup](/papers/experimental_setup.gif)
+
+##[Analog Synthetic Biology](/papers/Analog_Synbio.pdf)
+> Nevertheless, we must not forget that digital computation has not offered an effective paradigm for computing efficiently and precisely with noisy and unreliable devices; that multi-logic-gate computations can impose significant metabolic or toxicity burdens on cells owing to their need to use a lot of parts and power; that the fact that there are five to six orders of magnitude fewer genes per cell than digital transistors per chip means that using genes to only perform logic is likely not an efficient way to attain high complexity; that a library of ‘digital parts’ with good on–off ratios, low standby power consumption and low crosstalk does not exist in biology; that the computing basis functions in cells are not really logic functions and abstracting them as such compromises computational efficiency; and that logic basis functions are not the only universal computation primitives.
+
+- No static discipline? Don't just make one up that doesn't work the same way in cells as it does in computers!
+
+> The ‘1’s and ‘0’s of today’s digital computers are useful abstractions of the analog signals in cells, but are often an oversimplification.
+
+- If digital abstraction can't be used to create a working system, then it isn't digital abstraction!
+> Furthermore, as in analog circuits, the wiring of the output of one circuit to the input of another leads to ‘loading’ interactions that degrade overall function and prevents simple modular digital abstractions from being effective [13].
+
+- Figure 1b allows you to focus on a ```protein input protein output```point of view
+![analog](/papers/analog.png)
+
+
