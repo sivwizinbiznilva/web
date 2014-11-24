@@ -167,4 +167,4 @@ Biocoder as shown in this paper: [Automatic Synthesis of Microfluidic Large Scal
 - Figure 1b allows you to focus on a ```protein input protein output```point of view
 ![analog](/papers/analog.png)
 
-
+##[Voigt Nor Gate](/papers/voigtNORGate.pdf)
