@@ -168,3 +168,10 @@ Biocoder as shown in this paper: [Automatic Synthesis of Microfluidic Large Scal
 ![analog](/papers/analog.png)
 
 ##[Voigt Nor Gate](/papers/voigtNORGate.pdf)
+
+# Cell to Cell communication applications
+- [ Spatial Structure Facilitates Cooperation in a Social Dilemma: Empirical Evidence from a Bacterial Community](/papers/felix2013.pdf)
+- GASP = Growth Advantage in Stationary Phase
+> The fact that cooperation is simultaneously ubiquitous and fragile, begs for an explanation regarding its emergence and maintenance.
+> E. coli bacteria collectively restrain growth to avoid population collapse when resources become scarce [21]–[23]. The collective decision to restrain growth before all resources are depleted is a form of altruistic cooperation, and one can think of the entry into stationary phase as a social contract: a collective rule of density-dependent growth regulation [9], [24]. The long-term benefits of going into stationary phase are evident: by limiting population growth, bacteria ensure that enough resources will be available to maintain a viable population for an extended period, and survive until conditions improve and growth can be resumed. In the short term however, ‘cheater’ cells that ignore the collective decision to restrain growth and that utilize the scarce resources to proliferate instead of investing in maintenance, may increase in numbers. As a result, cheaters jeopardize the survival of the collective – which in turn could face a tragedy of the commons [25].
+In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only look at the sign of the payoff differences) to work; in a Snowdrift regime the Sucker's payout is positive). 
