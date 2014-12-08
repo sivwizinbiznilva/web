@@ -192,3 +192,34 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [Cultivating the uncultured: limits, advances and future challenges](http://link.springer.com/article/10.1007/s00792-009-0261-3/fulltext.html#CR84) <- No pdf link
   - Culture isolation using pH control?
 ![culture_isolation.gif](culture_isolation.gif)
+
+# Synthetic Biology Design
+- [From *bricolage* to BioBricks: Synthetic Biology and rational design](/papers/Lewens2013.pdf)
+  - Explores the limitations of the synbio design process 
+  - Synthetic Biology defined by the European Commission as "the synthesis of complex, biologically based (or inspired) systems which display functions that do not exist in nature. This engineering perspective may be applied at all levels of the hierarchy of biological structures...In essence, synthetic biology will enable the design of 'biological systems' in a rational and systematic way' 
+> The UK Health and Safety executive says that synthetic biology can be described as ‘the design and construction of new biological parts, devices and systems, and the redesign of existing, natural biological systems for useful purposes’ (HSE, 2007). The European Commission says that synthetic biology is ‘the engineering of biology: the synthesis of complex, biologically based (or inspired) systems which display functions that do not exist in nature. This engineering perspective may be applied at all levels of the hierarchy of biological structures … In essence, synthetic biology will enable the design of “biological systems” in a rational and systematic way’ (European Commission, 2005). The UK Parliamentary Office of Science and Technology tells us that synthetic biology ‘describes research that combines biology with the principles of engineering to design and build standardised, interchangeable biological DNA building-blocks. These have specific functions and can be joined to create engineered biological parts, systems and, potentially, organisms. [Synthetic biology] may also involve modifying naturally occurring genomes … to make new systems or by using them in new contexts’ (POST, 2008).
+  - 'Bottom up' design = construction of genetically specified components and combine them to create novel organic devices
+  - Top down = begin with naturally occurring organisms and seek to remove redundant or unnecessary parts to produce simpler, less 'noisy' organic machines.
+  - Research Opportunity?
+> the notion that an engineering design perspective characterises a variety of synthetic biology approaches remains in very recent research articles
+  - Irrational vs Rational design process
+> It is nonetheless reasonable to place synthetic biology towards one end of a continuum between purely ‘blind’ processes of organic modification at one extreme, and wholly rational, design-led processes at the other. 
+     - Irrational:
+> They are ‘irrational’ only because the agent who oversees the process need not understand why the resultant entity works as it does. Whether a method is ‘rational’ or ‘irrational’ is itself something that comes by degrees: an engineer may not understand why the parts of a machine work as they do, but he may still be able to predict in rough-and-ready ways how they will behave when brought together. After several moderately successful attempts he may be surprised at the makeup of the machine that works best.
+  - Nazi attempt to breed back aurochs failed because
+> On the basis of vague criteria and without proper knowledge of the appearance of the aurochs, the two brothers made inaccurate selections among the crossbreeding products of various cattle breeds. They did not use the knowledge about the aurochs that was available at the time, nor did they take advantage of the breeding techniques others were using to create new cattle breeds in the same period. (Van Vuure, 2005, p. 366)
+**Poor engineering design methodology**
+  - With regard to directed evolution, 'the creativity of synthetic biology itself continues to rely on processes whose efficacy may be inscrutable to the designers themselves, and which have much in common with familiar breeding techniques'
+  - Irrational design in 'evolutionary electronics'
+    - An FPGA was altered slightly and continuously tested for an ability to do a task and the best design could never have been achieved using normal design techniques
+> [These cells] cannot be clamped [i.e. returned to their default ‘blank’ state] without degrading performance, even though there is no connected path by which they could influence the output … They must be influencing the rest of the circuit by some means other than the normal cell-to-cell wires: this probably takes the form of a very localised interaction with immediately neighbouring components. Possible mechanisms include interaction through the power-supply wiring, or electromagnetic coupling. ( Thompson, 2002)
+  - Reducible complexity is not an artifact of evolution (T. Lewens 2004), therefore we should not expect to isolate components and then stick them together in a different order and expect rational behavior
+> Evolution has been free to explore the full repertoire of behaviours available from the silicon resources provided, even being able to exploit the subtle interactions between adjacent components that are not directly connected. (Thompson, 2002)
+  - **Does natural selection prefer modularity? Will it pick a modular design vs a non-modular design?**
+> It remains unclear whether natural selection is able to favour modularity
+> Natural selection is not constrained by a prior methodological commitment to rationality, and since natural selection must build traits that are effective in the face of regular internal and external insults, natural selection also needs to ensure that its products are robust against a range of environmental perturbations
+  - Abandon the idea of modularity in synthetic biology?
+> Biological complexity is here acknowledged, the barriers it presents to human intervention are explicitly admitted, and attempts are made to avoid it (in the first instance, at least) via the creation of simpler systems.
+ - Citing M. O'Malley 'Exploration, iterativity and kludging in synthetic biology': 
+>  Rather than focusing on hypotheses, testing and inference, synthetic biology invites attention to the practices of exploration, iterativity and kludging. Examining such strategies in relation to synthetic biology offers new avenues of insight for philosophy of science and biology.
+ - **Why not design with system complexity in mind?**
