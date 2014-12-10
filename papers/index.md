@@ -222,4 +222,112 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 > Biological complexity is here acknowledged, the barriers it presents to human intervention are explicitly admitted, and attempts are made to avoid it (in the first instance, at least) via the creation of simpler systems.
  - Citing M. O'Malley 'Exploration, iterativity and kludging in synthetic biology': 
 >  Rather than focusing on hypotheses, testing and inference, synthetic biology invites attention to the practices of exploration, iterativity and kludging. Examining such strategies in relation to synthetic biology offers new avenues of insight for philosophy of science and biology.
- - **Why not design with system complexity in mind?**
+ - **Why not design with system complexity in mind? For SynBio, this comes at the cost of modularity**
+- [Synthetic Biology at the Limits of Science](/papers/Nordmann2014.pdf)
+  - How should we approach understanding biology for achieving 'technical control'?
+    - Understanding
+    - Rationality
+    - Design
+  - Understanding
+    - Ability to create is touted by some as necessary to demonstrate understanding 
+      - Hypothesize, model, verify through experimentation 
+      - Creating is a method of knowledge exploration?? The author seems dubious
+> If one wants to engineer a biological structure or process, one "cannot help" but gain understanding also (Benner/Sismour 2005)
+    - Richard Feynman: "What I cannot create, I do not understand" != "What I can create, I do understand"
+> The ability to create now appears as a sufficient condition for understanding, suggesting that "understanding" can leap ahead of explanation and prediction
+    - Understanding involves removing complexity for the sake of deriving cause
+  - Rationality (Engineering principles)
+    - Why is design by trial-and-error (irrational design) seen as "less civilized" than rational design?
+> Those still working in the mode of trial and error have not ascended as yet to a level of intellectual and technical control that would allow them to invent new processes or devices simply from considerations of theory and principle
+
+      - counter example: "rational drug design" proved inferior to high-throughput, trial and error methods (Adam 2010) so the scientific community responds with nanomedicine and visions of targeted drug delivery ("this time we'll get it right")
+    - Amazing questions:
+> Similarly, the aspirations of synthetic biology are oft en judged in these terms Can the 'synthesis' of biological structures or processes proceed in a planned, deliberate, theory - and evidence - based manner such that the intended outcome is sues as if from a blueprint (Giese et al. 2013, O’Malley 2009 , Gramelsberger 2013 , Lewens 2013 ) ? And , if this is not the case , is this only “not yet ” the case, likely to become possible in just a few more years , or does it owe to a disc iplinary style of doing things – with chemists seeking rational control while bioengineers are more comfortable with tinkering ? Or does the failure of rational design owe to a limit of biological complexity that is irreducible and thus an insurmountable limit of control?
+
+    - Author's assertion: "The hierarchical conception that places rational engineering above tinkering is blind to the possibility of rational tinkering"
+    - Engineering may be opposed to "blind groping" but not search strategies that exploit random variations or iterative adaption and tuning.
+> These, to be sure, are rational strategies by which to work around limits of knowledge, and to achieve technical solutions in the absence of information about mechanical detail. **In other words, these are rational strategies to create robust black boxes or modules**
+    - Author's engineering design process
+      1. Analyze the situation to be emulated, automated or modeled
+      2. Based on analysis, construct a skeletal technical system (prototype)
+      3. Test the prototype
+    - The process applies "rational engineering principles" only up to the construction of the initial prototype
+      - The process is no longer an analysis of the initial situation, but the current technical system
+      - Each iteration inserts complexity until, "in the limit, the designed system emulates the target system near-perfectly and does so because it is similarly complex"
+> Thus one finds that a predictively successful simulation model can be nearly as complex and just as intractable as the “natural” system that is modeled by it(see, e.g., Lenhard/Winsberg 2010).This is a technical achievement by rational means. Though it does not consist in the application of “rational engineering principles,”it is not “mere” tinkering either,but a strategy to systematically optimize the performance of a technical system. 
+    - Systems Biology vs Synthetic Biology
+> Systems biology seeks total information and thus incorporates into its representational models all the findings of omics-research, synthetic biology wants to find out how far we can get with what little we know
+  - Design vs Evolution...uh oh!
+> While anti-Darwinian theories of intelligent design are in ill-repute, how can synthetic biology speak of design processes and simultaneously take the insights of evolutionary biology into account?...conceiving the same biological entity at one time as an object of design (as far as that will go), and at another time as an object of evolution (to the extent necessary), synthetic biologists are tending to the boundary between organism and artifact even as they appear to undermine or even reject it.
+    - What is the aim of SynBio?  
+      - Mimic biology? If so, then "artificial selection" is present instead of "natural selection". i.e. the divices have a purpose, which is not allowed in natural selection and not supported by evolutionary history
+      - Reproduce the work of natural evolution in a purposeful manner? Author asserts that this notion seems troubled by "techonolgical hubris" and accusations of "playing God", but it can be a sound notion if you treat "nature" as the engineer subject to its own laws. 
+> "If there are laws of nature, we can't violate them anyhow, and in the meantime, it is our job to push the limits of tehcnical possibility"
+> The very question s of how biological engineering should be related to natural history, or of how ev oluti on by natural selection differs from the design of b iological artifacts thus depend on our conception of synthetic biology – is it an intellectual enterprise with at least some theoretical ambitions or should one judge its attempt to advance unde rstanding of biological systems only in engineering terms ? Only in the former case does the problem arise of having to reconcile the competing ideas of evolution and design , while in the latter case it is merely a practical challenge to insulate as far as possible t he construction of biological entities and processes from the vagaries of evolutionary influence. This fault line between synthetic biolog y as somewhat theory - oriente d and as exclusively engineering - oriented also separates the two ways of paraphras ing Fey nman’s dictum as well as the two conceptions of rational engineering. It is the fault line that runs between science and technoscience.
+    - I take issue with the statement that if synbio is viewed "only in engineering terms" then one does not have to "reconcile the competing ideas of evolution and design". What if part of the engineering process requires knowing how the original system came to be in order to further modify it, as in complex system design? 
+      - I think it's a copout to assume that engineers can assume away issues that may be relevent to design because they don't have "theoretical ambitions"
+      - What happens when design (synbio) meets evolution (wild-type organisms). The author asserts this consideration should enter at the beginning of design "in reflections on the rhyme and reason of naturally evolved biological complexity". Doesn't "rhyme and reason" imply a purpose
+  - Why study the origin of synbio's?
+    -  Normative implications of historical accounts, "suggesting what synthetic biology ought to be and what opportunities and risks it poses, what obligations and expectations come with it"
+    - Is synbio an intellectual paradigm-shift from systems biology that revolves around systems-thinking to understand complexity (synbio is applied systems bio) or is it a means of generating higher complexity by treating systems as more or less efficient units of technical functioning?
+  - Synbio is the application of systems bio
+    - Normative behavior = synbio  must properly apply systems bio
+    - "Systems" are dynamic structures that require general systems theory or a theory of non-linear complex dynamics to describe it
+    - _Irreducible Holism_ triumphs over _Reductionist Mechanism_
+  - Synbio is a Technical Opportunity
+    - "Systems" are a technical construct that consists of at least sever interacting parts
+      - NOT a holistic way of thinking
+    - Normative behavior = what amount of complexity can I generate with the least amount of theoretical understanding?
+      - iGEM illustrates this example (even undergraduates can "do" synthetic biology!!)
+      - _Reductionist Mechanism_ does not necessarily triumph over _Irreducible Holism_, the questions are neither answered nor dismissed. Rather, they are absorbed into an "engineering idiom"
+  - **SUMMATION OF SYSTEMS THINKING VS TECH OPPORTUNITY (scientific vs technoscientific)**
+> To put it a bit metaphorically, then, in relation to systems biology , the two stories about synthetic biology do not attribute to the researchers different theories, opinions , or beliefs but an entirely different mind - set , a different way of living the laboratory life, of participating in history and relating to the tradition of science and the Enlightenment. On the one hand, t here is the scientific mind - set of those who query the limits of reductionism and embrace systems thinking ; on the other hand is the technoscientific mind - set of those who no longer seek the most appropriate way of reducing complexity and promoting intellectual understanding , but who proceed instead to generate biological complexity from available theories and techniques.
+  - Conflict
+    - Researchers may work using both methods, but within publications they only demonstrate one way of thinking
+    - If Synbio tries to have it all (basic and applied science) then there are three conflicts that emerge 
+      1. Accommodating ignorance
+      2. Discontinuous continuities
+      3. The matter of definition
+    - Accommodating ignorance
+      - What happens when senior researchers confront iGEM teams that "impatiently seek to achieve on extremely short time scales what others frame in terms of multidisciplinary, sometimes career-long research trajectories"?
+      - Five hard truths for synbio - Roberta Kwok
+        - Problem: No standardization 
+	  - Answer: sub relative for absolute measures
+        - Problem: No predictable design proceedures and trial and error is too arduous
+          - Answer: Directed evolution, i.e. the design cycle and its  iteration "until the system is optimized"
+	- Problem: Greater system complexity
+	  - Answer: Automation
+	- Problem: Unexpected interactions
+	  - Answer: Insulate biological machinery from cell's "natural machinery"
+	- Problem: Variability and stability
+	  - Answer: Avoid variability and increase stability
+	- **Summary**: Only chance for synbio to succeed is by way of design processes that can acoommodate or work around ignorance
+      - Nature published an editorial on the 10th anniversary of the repressilator and a switchable regulartory network and say that these "contributions to and from basic science are part of synthetic biology that most deserves celebration"
+        - Does this mean synbio is a basic science? an applied science? if applied science then:
+	  - "in which sense...is the design of the repressilator an 'experiment'"?
+	  - Is "to understand something one must build it" really a principle of physics as a basic science?
+	  - How and when is "to design" the same thing as "to define"?
+	  - How is the ability to create a computer model the same as human knowledge, ex. theories that are tractable by the human mind
+	    - Remember that the quote is "What I cannot create, I do not understand" not "What I can create, I do understand", which implies that "understanding" can leap ahead of explanation and prediction
+      - Discontinuous continuities
+![Nordmann Figure 1](/papers/Nordmann2014_F1.png)
+        - From Bujara and Panke, 2010); Issues;
+	  - The rest of the paper was highlighting discontinuous differences between design by Random Evolution, Directed Evolution and Comginatorial Design
+	  - Design by Random Evolution (evolutionary design) is an oxymoronic misnomer...see intelligent design
+	  - The picture implies further development of combinatorial design strategies will produce knowledge required for progression to rational design
+	  - Rational design is assumed to be more effective than evolutionary design...why is that? because it's "rational", or knowledge based? The authors admit that it's just a hypothesis that needs to be tested.
+	  - The figure paints an ambivalent picture: the knowledge required is too great so a new trajectory is needed that bypasses the prohibitively high knowledge requirement, or the picture cheerfully tells a story of progress and a sequence of steps towards the ultimate goal of rational design
+	- Tabor advocates creating things through a kind of technical probing and then passing the information on to systems biologists for hypothesis generation and testing
+>  “As automated circuit design and assembly dovetails with iterative optimization, our ability to engineer circuits should extend beyond our ability to truly understand how they work. The tractability of modularly constructed synthetic circuits, however, should also feed back to accelerate the cycle of hypothesis generation and testing in systems biology.” (Tabor 2012, 1063)
+	- The author takes Tabor as saying that computers, rather than humans, will "understand" the organizing principles of life, which the author argues "leaves untouched the break with the epistemic values and traditional ideals of science"
+      - The matter of definition
+	- Synthetic biology is not analytic because it generates rather than reduces complexity
+	- The author's definition of synbio:
+> This, then, suggests a definition of synthetic biology that highlights its specific epistemic values and ideals: For constructive purposes synthetic biology builds on the achievement in silico, in vitro, and in vivo of technical control of biological complexity, that is, it is the endeavor of drawing together de facto achievements of technical control for the generation of technical systems with greater biological complexity.
+    - Conclusion
+	- The tension between an engineering approach and the quest for understanding biological processes cannot be resolved by simply stating that synbio can do both
+> "It is quite impossible to simply marry the epistemic ideals of technoscientific synthetic biology to those of biology as a theoretical science - they pull in opposite directions, after all: Here the reduction of complexity for the purposes of intellectual tractability, there the drawing together of scientific knowledge and technological capability for the generation of complexity beyond our ability to truly understand how our own creations work. Here the identification of bottle-necks and needs- to-know for rational engineering, along with the demand for more and better theoretical knowledge in order to diminish ignorance, and there the attempt primarily to discover how much one can achieve even with how little we know, with considerable tolerance for ignorance of everything that can be black-boxed. The tension, even antagonism, between these epistemic ideals cannot be dissolved – which does not preclude, of course, that the corresponding research findings can inform, even inspire one another.
+	- YES!
+> It is not at all impossible, in contrast, to marry the notion of bringing an engineering approach to biology and the notion of knowledge production through synthetic biology – but in order to do so one might have to become dishabituated from the established scientific image of knowledge and of knowledge production. From the point of view of the engineering approach, knowledge and understanding need not be tied to the intellectual tractability of causal relations, nor does it consist in the truth or falsity, or empirical adequacy of linguistic statements such as theories or hypotheses. Instead, knowledge and understanding might reside in computer models and other technologically robust constructions, tied to the iterations of the design cycle as a learning process of sorts.
+	- YES YES! From the Nature editorial:
+> As it develops along this and other paths, synthetic biology itself will demand more by way of new fundamental biological knowledge — quantitative, systematic, computational and biophysical. And conversely, one of the deepest lessons from these first ten years is that biological knowledge will require synthetic approaches if it is to become a mature and reasonably predictive science. (Nature editorial 2010)
