@@ -223,6 +223,8 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
  - Citing M. O'Malley 'Exploration, iterativity and kludging in synthetic biology': 
 >  Rather than focusing on hypotheses, testing and inference, synthetic biology invites attention to the practices of exploration, iterativity and kludging. Examining such strategies in relation to synthetic biology offers new avenues of insight for philosophy of science and biology.
  - **Why not design with system complexity in mind? For SynBio, this comes at the cost of modularity**
+
+
 - [Synthetic Biology at the Limits of Science](/papers/Nordmann2014.pdf)
   - How should we approach understanding biology for achieving 'technical control'?
     - Understanding
@@ -319,6 +321,8 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 	  - The figure paints an ambivalent picture: the knowledge required is too great so a new trajectory is needed that bypasses the prohibitively high knowledge requirement, or the picture cheerfully tells a story of progress and a sequence of steps towards the ultimate goal of rational design
 	- Tabor advocates creating things through a kind of technical probing and then passing the information on to systems biologists for hypothesis generation and testing
 >  “As automated circuit design and assembly dovetails with iterative optimization, our ability to engineer circuits should extend beyond our ability to truly understand how they work. The tractability of modularly constructed synthetic circuits, however, should also feed back to accelerate the cycle of hypothesis generation and testing in systems biology.” (Tabor 2012, 1063)
+        - Tabor's process:
+> Tabor offers an epistemologically telling description of the design - cycle approach: „Here, the first design is based on the ligand - inhibited repressors LacI and TetR. Each is initially placed upstream of an associated fluorescent reporter on a polycistronic mRNA. The operons show poor reporter expression, which is then imp roved by ‘plugging in’ additional copies of the appropriate promoter upstream of each reporter. This increases reporter expression, but reveals that the circuit cannot reach the TetR - dominated state. The tetR promoter is then swapped for a stronger version , but this overcompensates for the problem making only the TetR state stable. A library of random tetR ribosome binding sites (RBSs) is then screened, and a variant that hits the bistable sweet spot is found ” (Tabor 2012, 1063, compare Litcofsky et al. 2012)
 	- The author takes Tabor as saying that computers, rather than humans, will "understand" the organizing principles of life, which the author argues "leaves untouched the break with the epistemic values and traditional ideals of science"
       - The matter of definition
 	- Synthetic biology is not analytic because it generates rather than reduces complexity
@@ -331,3 +335,48 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 > It is not at all impossible, in contrast, to marry the notion of bringing an engineering approach to biology and the notion of knowledge production through synthetic biology – but in order to do so one might have to become dishabituated from the established scientific image of knowledge and of knowledge production. From the point of view of the engineering approach, knowledge and understanding need not be tied to the intellectual tractability of causal relations, nor does it consist in the truth or falsity, or empirical adequacy of linguistic statements such as theories or hypotheses. Instead, knowledge and understanding might reside in computer models and other technologically robust constructions, tied to the iterations of the design cycle as a learning process of sorts.
 	- YES YES! From the Nature editorial:
 > As it develops along this and other paths, synthetic biology itself will demand more by way of new fundamental biological knowledge — quantitative, systematic, computational and biophysical. And conversely, one of the deepest lessons from these first ten years is that biological knowledge will require synthetic approaches if it is to become a mature and reasonably predictive science. (Nature editorial 2010)
+
+- [Engineering in complex systems](/papers/Bujara2010.pdf)
+  - Measure, Model, Manipulate?
+> The hallmark of design is the engineering design cycle with its three elements of 'measure, model, manipualte'
+    - This does not resemble any engineering design process or cycle that I am familiar with and it was published in "current opinions in Biotechnology"!!! :O
+    - The 'measure, model, manipulate' cycle appears to be an assumption the rest of the paper is based upon
+  - Measure
+    - Problem: Limited observation times to prevent cellular adaptation
+    - Possible solution: Doug's assay "memory" device??
+  - Limitations of cycle
+    - Two methods to reduce complexity
+      1. Reduce system size
+      2. Add insulation between subsystems
+
+- [Designing Synthetic Biology](/papers/Agapakis2013.pdf)
+
+- [Synthetic Biology: Applying Engineering to Biology](/papers/nestreport2005.pdf)
+  - Never defines what engineering is
+> Adapting natural biological mechanisms to the requirements of an engineering approach, the possibilities for re-assembling biological systems in a designed way will increase tremendously
+
+    - What are those requirements?
+
+  - Confuses managing complexity with the engineering method
+> the introduction of design principles such as modularity of parts, standardization of parts and devices according to internationally recognized criteria, and the (reciprocal) adaptation of available abstract design procedures to biological systems, coupled to novel technological breakthroughs (such as cheap mass synthesis of large DNA segments) that allow the decoupling of design and fabrication, will fundamentally change our current concepts of how to manipulate biological systems.
+
+  - What is this "engineering approach" you speak of?
+
+> Synthetic biology is not content with explaining or simply reproducing the behaviour of natural systems. Rather, synthetic biology aims to go one step further by building, i.e. synthesizing, novel biological systems from scratch using the design principles observed in nature but with expanded, enhanced and controllable properties. The complexity of such a design goal makes an engineering approach imperative
+
+  - Great bibliography! Papers listed by category
+
+- [Exploration, iterativity and kludging in synthetic biology](/papers/OMalley2011.pdf)
+  - Three "streams" in synbio that "produce knowledge" in different ways
+    1. DNA-based device construction
+    2. Genome-driven cell engineering
+    3. Create protocells
+  - Create Protocells
+    - Make minimal or minimized cells that can function as basic approximations of living cells 
+    - _Possibly remove complexities from the evolutionary process, much in the same way you could make x86 more efficient by removing vestiges from its past?_
+  - "In order to achieve the goal of constructing designed and decomplexified systems, synthetic biologists...argue engineering approaches will work only if the excess or irrational complexity of living systems is minimized or, better, avoided altogether"
+    - _The authors seem to want just the benefits of the engineering process, without the actual process_ 
+    - > Rather than hypothesis testing in a formal and narrow sense, synthetic biology invokes a range of philosophically neglected strategies for gaining scientific knowledge.
+      - _why the assumption that synthetic biologists want to gain scientific knowledge?_
+
+- [Synthetic biology: new engineering rules for an emerging discipline](/papers/andrianantoandro2006.pdf)
