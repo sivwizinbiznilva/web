@@ -395,7 +395,7 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
     - > Rather than hypothesis testing in a formal and narrow sense, synthetic biology invokes a range of philosophically neglected strategies for gaining scientific knowledge.
       - _why the assumption that synthetic biologists want to gain scientific knowledge?_
 
-- Synthetic biology: new engineering rules for an emerging discipline](/papers/andrianantoandro2006.pdf)
+- [Synthetic biology: new engineering rules for an emerging discipline](/papers/andrianantoandro2006.pdf)
 
 #Real Time Reconfiguration
 - [FPGA Partial Reconfiguration Goes Mainstream](/papers/mccaskill2010.pdf)
