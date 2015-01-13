@@ -401,3 +401,4 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [FPGA Partial Reconfiguration Goes Mainstream](/papers/mccaskill2010.pdf)
   - Article starts on pg 42
 - [Partial Reconfiguration: A Simple Tutorial](/papers/prtutorial.pdf)
+- Chick Duck
