@@ -402,3 +402,6 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
   - Article starts on pg 42
 - [Partial Reconfiguration: A Simple Tutorial](/papers/prtutorial.pdf)
 - Chick Duck
+
+#FPGA Lab Automation
+- [FPGA-based bio-cybernetic system for lab-on-a-chip automation](/papers/wang2012.pdf)
