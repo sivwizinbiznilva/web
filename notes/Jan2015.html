@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Do Work!</title>
+        <meta name="description" content="Ryan Silva's Lab Work">
+        <meta name="author" content="Ryan Silva, Branched from Todd Branchflower">
+        <link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+        <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+	<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],
+		                  ['\\(','\\)']]}});
+	 </script>
+	<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+         </script>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+	<script src="/node_modules/highlight.js/lib/index.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar navbar-inverse">
+                <div class = "navbar-inner">
+                    <a class = "brand" href="/index.html">AVLIS</a>
+                    <ul class = "nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/setup/index.html">Setup</a></li>
+                        <li><a href="/equipment/index.html">Equipment List</a></li>
+                        <li><a href="/lab/index.html">Lab Work</a></li>
+                        <li><a href="/links/index.html">Links</a></li>
+                        <li><a href="/papers/index.html">Papers</a></li>
+                        <li><a href="/TeamDocs/index.html">Team Docs</a></li>
+                        <li><a href="/action_items/index.html">Action Items</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1>Partial Reconfiguration Workshop</h1>
+<ul>
+<li>Benefits of PR<ul>
+<li>Reduce power</li>
+<li>Avoid multi-chip solutions when resources are limited</li>
+</ul>
+</li>
+<li>Terms<ul>
+<li><strong>Fixed Configuration</strong> - Typical config mode</li>
+<li><strong>Reconfiguration</strong> - Load a different full device bitstream</li>
+<li><strong>Partial Reconfiguration</strong> - Only alter a subset of config data, but all computation haults during modification</li>
+<li><strong>Dynamic Reconfigration</strong> - Alter a subset of config data, but logic layer continues operating</li>
+</ul>
+</li>
+<li>Synthesis<ul>
+<li>For PR, you must synthesize bottom-up, which does not allow optimization across reconfigurable modules (RM)</li>
+</ul>
+</li>
+</ul>
+<h2>Vivado Design Flow</h2>
+<ul>
+<li>vivado.jou - Contains just the Tcl commands executed by the vivado ide</li>
+</ul>
+<h2>Lab 1</h2>
+<ul>
+<li>You cannot have two reconfigurable partitions above or below each other in the same clock region<blockquote>
+<p>Partial bitstreams by constrution are the height of a full clock region</p>
+</blockquote>
+</li>
+</ul>
+<h2>PR Design Considerations</h2>
+<ul>
+<li>Keep interactions between modules simple</li>
+<li>You will not get away with playing clock games!<ul>
+<li>Only use one clock, one edge (all rising or falling)</li>
+<li>D-type ffs</li>
+</ul>
+</li>
+<li>Register behavioral block outputs</li>
+<li>Do not use constants as inputs to a partition</li>
+<li>Combinatorial logic will not be combined across partition boundaries<ul>
+<li>REGISTER ALL OUTPUTS AND INPUTS<ul>
+<li>Register outputs of RM in static logic since RM will not output valid data until PR is complete</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>No global set/reset function for PR</li>
+<li>Each RM destined to fit in a RP must be named the same and posses identical ports!</li>
+</ul>
+<h2>PR Controller</h2>
+<ul>
+<li>Use ACI Lite if PRC functionality needs to be altered under the software control</li>
+</ul>
+<h2>Debugging PR Design</h2>
+<ul>
+<li>Actual function of Partial Reconfiguration can&#39;t be simulated<ul>
+<li>No model for configuration sequence or ICAP (internal configuration access port)</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </body>
+</html>
