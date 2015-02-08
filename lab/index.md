@@ -14,3 +14,13 @@ title = 'Lab Log'
 | October 2014 | - | [October Notes](/notes/Oct2014.html) | -  | [6 Oct 2014](/notes/meeting/6Oct2014.html), [20 Oct 2014](/notes/meeting/20Oct2014.html) |
 | November 2014 | - | [November Notes](/notes/Nov2014.html) | - | [3 Nov 2014](/notes/meeting/3Nov2014.html), [17 Nov 2014](/notes/meeting/17Nov2014.html) |
 [Updates](http://slides.ryanjsilva.com/slides/update)
+
+| Test | Hypothesis | Status | Projection |
+| :-: | :-: | :-: | :-: | :-:|
+| Cleaning protocol using reconditioning solution | Solution will kill bacteria | 2x Unsuccessful tests | Reject hypothesis |
+| Cleaning protocol using bleach | Bleach will kill bacteria | 6x Successful tests | Accept hypothesis |
+| DVL1 | pH $\unicode{8733}$ $c(Lactose)^{-1}$ | 1x Successful test | Accept hypothesis | 
+| pConst - LacZ | pH $\unicode{8733}$ $c(Lactose)^{-1}$ | 2x unsuccessful tests | Regrow and test by Friday | 
+| pBad - LacZ | pH$\unicode{8595}$ inducible by Ara | Device built and sequenced (untested) | Initial test by next meeting |
+| pTet - LacZ | pH$\unicode{8595}$ inducible by aTc | Device built and sequenced (untested) | Initial test by next meeting | 
+| pRhl - YFP | Express YFP induced by RhlI | Voigt plasmids plated in wetlab | Initial test by next meeting |
