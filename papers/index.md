@@ -408,6 +408,11 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 
 # Papers for RPC
 - [FPGA-Based Accelerator Development for Non-Engineers](/papers/uliana2014.pdf)
+  - It used to be that data production was the bottleneck, now the bottleneck is data consumption and "intelligent processing at reasonable rates"
+  - They use the National Instruments LabVIEW FPGA environment targeting a Convey HC-1 platform
+  - "FPGAs outperform CPUs and GPUs for many applications, due to support for non-standard data types and massive, fine-grain parallelism, features that dominate many bioinformatics applications"
+  - Reprogrammability is a feature inherent to FPGAs and is not available in ASICs.
+  - **Meh, not a good paper for RPC**
 - [Can High-Level Synthesis Compete Against a Hand-Written Code in the Cryptographic Domain? A Case Study](/papers/homsirikamol2014.pdf)
 - [A Highly Flexible Reconfigurable System on a Xilinx FPGA](/papers/drahonovsky2014.pdf)
 - [Fault Attack on AES via Hardware Trojan Insertion by Dynamic Partial Reconfiguration of FPGA over Ethernet](/papers/johnson2014.pdf)
