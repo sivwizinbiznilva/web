@@ -405,3 +405,13 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 
 #FPGA Lab Automation
 - [FPGA-based bio-cybernetic system for lab-on-a-chip automation](/papers/wang2012.pdf)
+
+# Papers for RPC
+- [FPGA-Based Accelerator Development for Non-Engineers](/papers/uliana2014.pdf)
+- [Can High-Level Synthesis Compete Against a Hand-Written Code in the Cryptographic Domain? A Case Study](/papers/homsirikamol2014.pdf)
+- [A Highly Flexible Reconfigurable System on a Xilinx FPGA](/papers/drahonovsky2014.pdf)
+- [Fault Attack on AES via Hardware Trojan Insertion by Dynamic Partial Reconfiguration of FPGA over Ethernet](/papers/johnson2014.pdf)
+- [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
+- [PoC-Align: An Open-Source Alignment Accelerator using FPGAs](/papers/preuber2014.pdf)
+- [Side-challen Power Analysis of Different Protection Schemes Against Fault Attacks on AES](/papers/luo2014.pdf)
+- [What Limits the Operating Frequency of a Soft Processor Design](/papers/aasaraai2014.pdf)
