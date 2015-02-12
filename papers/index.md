@@ -408,15 +408,15 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [Performance-Area Improvement by Partial Reconfiguration for an Aerospace Remote Sensing Application](/papers/cardona2011.pdf)
   - Still need to read this more in-depth
   - They use DPR to facilitate computation while minimizing memory requirements (satellite) and obtain real-time behavior
-
-# Papers for RPC
-####2014
 - [FPGA-Based Accelerator Development for Non-Engineers](/papers/uliana2014.pdf)
   - It used to be that data production was the bottleneck, now the bottleneck is data consumption and "intelligent processing at reasonable rates"
   - They use the National Instruments LabVIEW FPGA environment targeting a Convey HC-1 platform
   - "FPGAs outperform CPUs and GPUs for many applications, due to support for non-standard data types and massive, fine-grain parallelism, features that dominate many bioinformatics applications"
   - Reprogrammability is a feature inherent to FPGAs and is not available in ASICs.
   - **Meh, not a good paper for RPC**
+
+# Papers for RPC
+####2014
 - [Can High-Level Synthesis Compete Against a Hand-Written Code in the Cryptographic Domain? A Case Study](/papers/homsirikamol2014.pdf)
   - The experiment pits an AES implementation written in C and run through HLS, vs handwritten VHDL 
   - The study uses ISE 14.7 and Quartus II 13.0sp1 for Xilinx and Altera FPGAs
