@@ -405,8 +405,12 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 
 #FPGA Lab Automation
 - [FPGA-based bio-cybernetic system for lab-on-a-chip automation](/papers/wang2012.pdf)
+- [Performance-Area Improvement by Partial Reconfiguration for an Aerospace Remote Sensing Application](/papers/cardona2011.pdf)
+  - Still need to read this more in-depth
+  - They use DPR to facilitate computation while minimizing memory requirements (satellite) and obtain real-time behavior
 
 # Papers for RPC
+####2014
 - [FPGA-Based Accelerator Development for Non-Engineers](/papers/uliana2014.pdf)
   - It used to be that data production was the bottleneck, now the bottleneck is data consumption and "intelligent processing at reasonable rates"
   - They use the National Instruments LabVIEW FPGA environment targeting a Convey HC-1 platform
@@ -414,9 +418,24 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
   - Reprogrammability is a feature inherent to FPGAs and is not available in ASICs.
   - **Meh, not a good paper for RPC**
 - [Can High-Level Synthesis Compete Against a Hand-Written Code in the Cryptographic Domain? A Case Study](/papers/homsirikamol2014.pdf)
+  - The experiment pits an AES implementation written in C and run through HLS, vs handwritten VHDL 
+  - The study uses ISE 14.7 and Quartus II 13.0sp1 for Xilinx and Altera FPGAs
+  - FPGAs consisted of one high-performance and one low-cost fpga from each vendor
+  - No vendor-specific IP was used (ex DSP blocks, BRAM, etc)
+  - **VERY COOL PAPER**
 - [A Highly Flexible Reconfigurable System on a Xilinx FPGA](/papers/drahonovsky2014.pdf)
+  - Poorly written. Obvious ESL
+  - **Meh** 
 - [Fault Attack on AES via Hardware Trojan Insertion by Dynamic Partial Reconfiguration of FPGA over Ethernet](/papers/johnson2014.pdf)
-- [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
 - [PoC-Align: An Open-Source Alignment Accelerator using FPGAs](/papers/preuber2014.pdf)
 - [Side-challen Power Analysis of Different Protection Schemes Against Fault Attacks on AES](/papers/luo2014.pdf)
 - [What Limits the Operating Frequency of a Soft Processor Design](/papers/aasaraai2014.pdf)
+####2013
+- [Countermeasures against EM Analysis for a Secured FPGA-based AES Implementation](/papers/maistri2013.pdf)
+- [High Level Synthesis: Where Are We? A Case Study on Matrix Multiplication](/papers/skalicky.pdf)
+- [Improved Method for Parallel AES-GCM Cores Using FPGAs](/papers/abdellatif.pdf)
+####2011
+- [Robustness analysis of different AES implementations on SRAM based FPGAs](kretzschmar2011.pdf)
+####2010
+- [Fault Injection Results of Linux Operating on an FPGA Embedded Platform](/papers/monson2010.pdf)
+- [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
