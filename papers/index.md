@@ -427,6 +427,8 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
   - Poorly written. Obvious ESL
   - **Meh** 
 - [Fault Attack on AES via Hardware Trojan Insertion by Dynamic Partial Reconfiguration of FPGA over Ethernet](/papers/johnson2014.pdf)
+  - Interesting, using DPR you can insert a hardware trojan horse (HTH) into an FPGA
+  - Contribution: usually HTHs are the result of "malicious 'insider' parties in the design or manufacturing" phases. FPGAs open the door for the insertion of HTHs after a circuit has been vetted for traditional HTHs, i.e. no validation method currently exists for DPR HTHs
 - [PoC-Align: An Open-Source Alignment Accelerator using FPGAs](/papers/preuber2014.pdf)
 - [Side-challen Power Analysis of Different Protection Schemes Against Fault Attacks on AES](/papers/luo2014.pdf)
 - [What Limits the Operating Frequency of a Soft Processor Design](/papers/aasaraai2014.pdf)
