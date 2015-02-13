@@ -402,18 +402,28 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
   - Article starts on pg 42
 - [Partial Reconfiguration: A Simple Tutorial](/papers/prtutorial.pdf)
 - [Xilinx UG947](/papers/pr_tutorial.pdf) 
+- [Performance of Partial Reconfiguration in FPGA Systems: A Survey and a Cost Model](/papers/hauck2009.pdf)
+  - Doug's recommended author (Scott Hauck of UW)
+- [Birth and adolescence of reconfigurable computing: A survey of the first 20 years of field-programmable custom computing machines](/papers/dehon2013.pdf)
+  - Doug's recommended author (Andre DeHon of U Penn) 
+- [Simple Interface for Reconfigurable Computing setup](https://github.com/praveendath92/PDL/wiki/SIRC-setup)
 
 #FPGA Lab Automation
 - [FPGA-based bio-cybernetic system for lab-on-a-chip automation](/papers/wang2012.pdf)
 - [Performance-Area Improvement by Partial Reconfiguration for an Aerospace Remote Sensing Application](/papers/cardona2011.pdf)
   - Still need to read this more in-depth
   - They use DPR to facilitate computation while minimizing memory requirements (satellite) and obtain real-time behavior
+#FPGA Meets Biology
 - [FPGA-Based Accelerator Development for Non-Engineers](/papers/uliana2014.pdf)
   - It used to be that data production was the bottleneck, now the bottleneck is data consumption and "intelligent processing at reasonable rates"
   - They use the National Instruments LabVIEW FPGA environment targeting a Convey HC-1 platform
   - "FPGAs outperform CPUs and GPUs for many applications, due to support for non-standard data types and massive, fine-grain parallelism, features that dominate many bioinformatics applications"
   - Reprogrammability is a feature inherent to FPGAs and is not available in ASICs.
   - **Meh, not a good paper for RPC**
+- [Hardware Acceleration of Short Read Mapping](/papers/olson2012.pdf)
+  - Smith-Waterman
+- [An FPGA Acceleration of Short Read Human Genome Mapping](/papers/olson2011.pdf)
+  - Thesis of above paper. Lots of detail.
 
 # Papers for RPC
 ####2014
@@ -430,7 +440,8 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
   - Interesting, using DPR you can insert a hardware trojan horse (HTH) into an FPGA
   - Contribution: usually HTHs are the result of "malicious 'insider' parties in the design or manufacturing" phases. FPGAs open the door for the insertion of HTHs after a circuit has been vetted for traditional HTHs, i.e. no validation method currently exists for DPR HTHs
 - [PoC-Align: An Open-Source Alignment Accelerator using FPGAs](/papers/preuber2014.pdf)
-- [Side-challen Power Analysis of Different Protection Schemes Against Fault Attacks on AES](/papers/luo2014.pdf)
+- [Side-channel Power Analysis of Different Protection Schemes Against Fault Attacks on AES](/papers/luo2014.pdf)
+  - Cool paper that can be used to support the threat DPR Hardware Trojan's present
 - [What Limits the Operating Frequency of a Soft Processor Design](/papers/aasaraai2014.pdf)
 ####2013
 - [Countermeasures against EM Analysis for a Secured FPGA-based AES Implementation](/papers/maistri2013.pdf)
