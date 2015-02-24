@@ -108,6 +108,11 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
   - **Dynamic Range**
     - The observable space between uninduced and fully saturated induction
 
+#Microfluidic Valve Control
+- [Build your own microfluidic valve controller](https://sites.google.com/site/rafaelsmicrofluidicspage/valve-controllers)
+- [Use syringes to test a microfluidic chip](http://web.stanford.edu/group/foundry/Testing%20Using%20Syringes.html)
+
+
 #Microfluidics
 
 - [Combining microfluidics and synthetic biology](/papers/Microfluidics_and_SynBio.pdf)
@@ -407,6 +412,7 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [Birth and adolescence of reconfigurable computing: A survey of the first 20 years of field-programmable custom computing machines](/papers/dehon2013.pdf)
   - Doug's recommended author (Andre DeHon of U Penn) 
 - [Simple Interface for Reconfigurable Computing setup](https://github.com/praveendath92/PDL/wiki/SIRC-setup)
+- [FPGA Pros and Cons](http://opensourceecology.org/wiki/FPGA)
 
 #FPGA Lab Automation
 - [FPGA-based bio-cybernetic system for lab-on-a-chip automation](/papers/wang2012.pdf)
@@ -452,3 +458,12 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 ####2010
 - [Fault Injection Results of Linux Operating on an FPGA Embedded Platform](/papers/monson2010.pdf)
 - [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
+
+# Syringe Pump
+- [Klavins Lab Wiki](https://depts.washington.edu/soslab/turbidostat/pmwiki/pmwiki.php?n=ConstructionManual.SyringePump)
+- [Open-Source Syringe Pump Library](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107216#s2)
+
+# EC551
+- [The Synthesis of Cyclic Combinational Circuits](/papers/riedel2003.pdf)
+
+- [Making Cyclic Circuits Acyclic](/papers/edwards2003.pdf)
