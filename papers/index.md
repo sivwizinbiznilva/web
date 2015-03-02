@@ -112,8 +112,15 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Build your own microfluidic valve controller](https://sites.google.com/site/rafaelsmicrofluidicspage/valve-controllers)
 - [Use syringes to test a microfluidic chip](http://web.stanford.edu/group/foundry/Testing%20Using%20Syringes.html)
 
+#Fluigi
+
+- [Fluigi: Microfluidic Device Synthesis for Synthetic Biology](/papers/huang2014.pdf)
+
+- [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+
+- [Theory and Analysis of Generalized Mixing and Dilution of Biochemical Fluids Using Digital Microfluidic Biochips](/papers/roy2014.pdf)
 
 - [Combining microfluidics and synthetic biology](/papers/Microfluidics_and_SynBio.pdf)
 
