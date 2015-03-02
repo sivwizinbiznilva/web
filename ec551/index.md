@@ -30,7 +30,11 @@ References:
 - Used for the **mov Rn, num** instruction
   - Device will pad the lower 6 bits of the 16-bit instruction with zeros in order to properly load the immediate value *<num>* into the register specified by the *Rn* field
 
-#### ALU
+#### ALU^
+
+![alu](alu.jpg)
+^Copyright 2007 Elsevier 
+
 - Design taken from *Harris and Harris, Digital Design and Computer Architecture 2nd Edition, 2013*
 - Performs arithmetic operations on inputs A and B based on the 3-bit control input ALUControl
 
