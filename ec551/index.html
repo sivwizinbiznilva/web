@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Do Work!</title>
+        <meta name="description" content="Ryan Silva's Lab Work">
+        <meta name="author" content="Ryan Silva, Branched from Todd Branchflower">
+        <link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+        <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+	<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],
+		                  ['\\(','\\)']]}});
+	 </script>
+	<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+         </script>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+	<script src="/node_modules/highlight.js/lib/index.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar navbar-inverse">
+                <div class = "navbar-inner">
+                    <a class = "brand" href="/index.html">AVLIS</a>
+                    <ul class = "nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/setup/index.html">Setup</a></li>
+                        <li><a href="/equipment/index.html">Equipment List</a></li>
+                        <li><a href="/lab/index.html">Lab Work</a></li>
+                        <li><a href="/links/index.html">Links</a></li>
+                        <li><a href="/papers/index.html">Papers</a></li>
+                        <li><a href="/TeamDocs/index.html">Team Docs</a></li>
+                        <li><a href="/ec551/index.html">EC551</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1>Lab 1 Readme</h1>
+<p>References:<br>- All figures modified from <em>Harris and Harris, Digital Design and Computer Architecture 2nd Edition, Morgan-Kaufmann 2013</em><br>- Processor verilog code modified from the MIPS example in <em>ibid</em><br>- The VGA control verilog code modified from <em>Chu, Pong P, FPGA Prototyping By Verilog Examples: Xilinx Spartan 3 Version, Wiley 2008</em> </p>
+<h2>Top-level schematic</h2>
+<p><img src="top.jpg" alt="top"></p>
+<h3>Component Descriptions</h3>
+<h4>Instruction/Data Memory</h4>
+<ul>
+<li>16x4096 Dual-Read Single-Write Block RAM<ul>
+<li>Dual Read Ports: <ul>
+<li>Separate inputs for instruction address (<strong>Ai</strong>) and data address (<strong>Ad</strong>)</li>
+<li>Separate outputs for instruction data (<strong>Ri</strong>) and Read/Write data (<strong>Rd</strong>)</li>
+</ul>
+</li>
+<li>Single Write Port:<ul>
+<li>Will write data from <strong>Wd</strong> to memory address <strong>Ad</strong> when write enable (<strong>We</strong>) is high</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Register File</h4>
+<ul>
+<li>16x6 Dual-Read Single-Write Register File<ul>
+<li>Dual Read Ports:<ul>
+<li>Separate inputs addressing Rm and Rn per the ISA</li>
+</ul>
+</li>
+<li>Single Write Port:<ul>
+<li>Will write data from <strong>Wd</strong> to <strong>Wa</strong> when write enable (<strong>We</strong>) is high</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Zero Extend</h4>
+<ul>
+<li>Used for the <strong>mov Rn, num</strong> instruction<ul>
+<li>Device will pad the lower 6 bits of the 16-bit instruction with zeros in order to properly load the immediate value <em><num></em> into the register specified by the <em>Rn</em> field</li>
+</ul>
+</li>
+</ul>
+<h4>ALU</h4>
+<ul>
+<li>Design taken from <em>Harris and Harris, Digital Design and Computer Architecture 2nd Edition, 2013</em></li>
+<li>Performs arithmetic operations on inputs A and B based on the 3-bit control input ALUControl</li>
+</ul>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th align="center">ALUControl(2:0)</th>
+<th align="center">Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" colspan="1">000</td>
+<td align="center" colspan="1">A and B</td>
+</tr>
+<tr>
+<td align="center" colspan="1">001</td>
+<td align="center" colspan="1">A or B</td>
+</tr>
+<tr>
+<td align="center" colspan="1">010</td>
+<td align="center" colspan="1">A + B</td>
+</tr>
+<tr>
+<td align="center" colspan="1">011</td>
+<td align="center" colspan="1">unused</td>
+</tr>
+<tr>
+<td align="center" colspan="1">100</td>
+<td align="center" colspan="1">A and ~B</td>
+</tr>
+<tr>
+<td align="center" colspan="1">101</td>
+<td align="center" colspan="1">A or ~B</td>
+</tr>
+<tr>
+<td align="center" colspan="1">110</td>
+<td align="center" colspan="1">A - B</td>
+</tr>
+<tr>
+<td align="center" colspan="1">111</td>
+<td align="center" colspan="1">Set Less Than</td>
+</tr>
+</tbody>
+</table>
+<h4>Control Unit</h4>
+<ul>
+<li>Modifies control signals based on the 4-bit opcode (the most significant 4 bits of the instruction, i.e. Instr(15:12)) </li>
+<li>Note: There is <strong>no functional difference between sadd and add.</strong><ul>
+<li>Signed addition is performed using the <strong>exact same</strong> hardware as unsigned addition (hence the power of two&#39;s complement)</li>
+<li>Since the <strong>cmp Rn, Rm</strong> instruction is only used for <strong>jne</strong> and <strong>je</strong> instructions there is no need to change the microarchitecture to account for the introduction of signed addition (i.e. you don&#39;t need to interpret the output of a signed vs unsigned adder to compute whether two numbers are equal)</li>
+</ul>
+</li>
+</ul>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th align="center">Mnemonic</th>
+<th align="center">Opcode</th>
+<th align="center">RegWrite</th>
+<th align="center">MemWrite</th>
+<th align="center">AddrSel</th>
+<th align="center">DataToReg</th>
+<th align="center">Halt</th>
+<th align="center">ALUControl</th>
+<th align="center">IncAddr</th>
+<th align="center">IncData</th>
+<th align="center">JumpAlways</th>
+<th align="center">JumpCond</th>
+<th align="center">JNE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" colspan="1">mov Rn, [Rm]</td>
+<td align="center" colspan="1">1100</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">01</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">mov [Rn], Rm</td>
+<td align="center" colspan="1">1011</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">XX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">mov Rn, num</td>
+<td align="center" colspan="1">1001</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">00</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">mov Rn, Rm</td>
+<td align="center" colspan="1">1010</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">10</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">halt</td>
+<td align="center" colspan="1">0000</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">XX</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">add Rn, Rm</td>
+<td align="center" colspan="1">0101</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">11</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">010</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">sub Rn, Rn</td>
+<td align="center" colspan="1">0110</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">11</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">110</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">xor Rn, Rm</td>
+<td align="center" colspan="1">0111</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">11</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">001</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">cmp Rn, Rm</td>
+<td align="center" colspan="1">1000</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">11</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">110</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">sadd Rn, Rm</td>
+<td align="center" colspan="1">1101</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">11</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">010</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">inc Rn</td>
+<td align="center" colspan="1">0001</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">11</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">010</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">jmp <target></td>
+<td align="center" colspan="1">0010</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">XX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">je <target></td>
+<td align="center" colspan="1">0100</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">XX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">0</td>
+</tr>
+<tr>
+<td align="center" colspan="1">jne <target></td>
+<td align="center" colspan="1">0011</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">XX</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">XXX</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">X</td>
+<td align="center" colspan="1">0</td>
+<td align="center" colspan="1">1</td>
+<td align="center" colspan="1">1</td>
+</tr>
+</tbody>
+</table>
+<h3>Example Data Flows</h3>
+<p>Instruction-Specific Data Flows are Highlighted in Red in the Figures Below</p>
+<h4><em>halt</em></h4>
+<p><img src="halt.jpg" alt="halt"></p>
+<p>The datapath for the <em>halt</em> instruction is highlighted in red in the above picture.</p>
+<p>In the absence of a <em>jump</em> or <em>halt</em> instruction, the Program Counter would take on the value of the Program Counter plus one (<strong>PCPlus1</strong>) every clock cycle. In the case of a <em>halt</em> instruction, the Program Counter should take on the value of the current program counter and, thus, linger on the current instruction until a button is pushed. This functionality is achieved through the use of a 4-1 mux, using the <strong>Halt</strong> control signal concatenated with the debounced button press as select lines.</p>
+<p>The figure shows that the Program Counter will maintain its current value so long as the <strong>Halt</strong> control signal is asserted AND the button has not been pressed.</p>
+<h4><em>add Rn, Rm</em></h4>
+<p><img src="add.jpg" alt="add"></p>
+<p>As shown in the above figure, the <em>add</em> instruction parses the 16-bit instruction by reading bits 5:0 of the 16-bit instruction as the address of the Rm register operand. Similarly, bits 11:6 are read as the address of the Rn register operand. The data from each of these registers is routed to the ALU, with the Rn data passing through a multiplexor, which is used to account for the <em>inc</em> instruction. The ALUControl signal is set to 010, which corresponds to an <em>add</em> operation as dictated by the control table listed in the ALU section above. </p>
+<p>The result of the ALU is routed through another multiplexor, which chooses the data to be written to the register file. This choice is made between the output of the zero extend module (for the <em>mov Rn, num</em> instruction), the output of memory (for the <em>mov Rn, [Rm]</em> instruction), the Rm output of the register file (for the <em>mov Rn, Rm</em> instruction) and, finally, the output of the ALU (for all ALU-based operations). Additionally, a choice must be made as to which address of the register file the data is written to, either Rn or Rm. This choice is made using a multiplexor controlled by the <strong>IncAddr</strong> control signal. </p>
+<h4><em>inc Rn</em></h4>
+<p><img src="inc.jpg" alt="inc"><br>The increment instruction is similar to the ALU-based <em>add</em> instruction described above. The difference between the two instructions lies in the input to the ALU (controlled by a mux with <strong>IncData</strong> select) and the register to be written to (controlled by a mux with <strong>IncAddr</strong> select). The only non-intuitive design consideration for the <em>inc Rn</em> instruction is that the bit field representing the register <em>Rn</em> normally corresponds to bits 11:6 of the Instr signal. The <em>inc Rn</em> instruction breaks this consistency by assigning register number to bits 5:0 of the Instr signal, which is accounted for by the IncAddr mux. </p>
+<h4><em>je <target></em></h4>
+<p><img src="je.jpg" alt="je"></p>
+<p>The <em>je</em> instruction is complex in the amount of control hardware it utilizes. The instruction should load a target address into the PC if the previous operation asserted the zero flag of the ALU. The flip flop connected to the <strong>Zero</strong> output of the ALU stores the state of the zero flag for the next instruction. Therefore, if the Q output of the zero flag flip flop is asserted and the <strong>jne</strong> control signal is not asserted, the output of the <em>XOR</em> gate will produce an asserted signal. The <em>jne</em> instruction will assert the <strong>JumpCond</strong> control signal, which will assert the output of the <em>AND</em> gate and consequently select the <em><target></em> address of the jump. The <em><target></em> address corresponds to bits 11:0 of the Instr signal.</p>
+<h4><em>mov Rn, [Rm]</em></h4>
+<p><img src="mov.jpg" alt="mov"></p>
+<p>The <em>mov Rn, [Rm]</em> instruction will load the register file with the data from the memory address stored in register file <em>Rm</em>. The data is fetched from <em>Rm</em> using the address in bits 5:0 of the Instr signal. The register file data is loaded into the data address port <em>Ad</em> of memory, through the use of a mux controlled by the <strong>AddrSel</strong> control signal. This resultant data is loaded into the Rn port of the register file through the <em>DataToReg</em> mux.</p>
+
+        </div>
+    </body>
+</html>
