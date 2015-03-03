@@ -1,4 +1,6 @@
 # Lab 1 Readme
+### Maj(s) Ryan J. Silva
+### Yunpeng Wang
 
 References: 
 - All figures modified from *Harris and Harris, Digital Design and Computer Architecture 2nd Edition, Morgan-Kaufmann 2013*
