@@ -185,6 +185,9 @@
 <h1>Fluigi</h1>
 <ul>
 <li><p><a href="/papers/huang2014.pdf">Fluigi: Microfluidic Device Synthesis for Synthetic Biology</a></p>
+<ul>
+<li></li>
+</ul>
 </li>
 <li><p><a href="/papers/huang2014_flow.pdf">Integration of microfluidics into the synthetic biology design flow</a></p>
 </li>
@@ -703,10 +706,12 @@
 <li><a href="/papers/wang2012.pdf">FPGA-based bio-cybernetic system for lab-on-a-chip automation</a></li>
 <li><a href="/papers/cardona2011.pdf">Performance-Area Improvement by Partial Reconfiguration for an Aerospace Remote Sensing Application</a><ul>
 <li>Still need to read this more in-depth</li>
-<li>They use DPR to facilitate computation while minimizing memory requirements (satellite) and obtain real-time behavior<h1>FPGA Meets Biology</h1>
-</li>
+<li>They use DPR to facilitate computation while minimizing memory requirements (satellite) and obtain real-time behavior</li>
 </ul>
 </li>
+</ul>
+<h1>FPGA Meets Biology</h1>
+<ul>
 <li><a href="/papers/uliana2014.pdf">FPGA-Based Accelerator Development for Non-Engineers</a><ul>
 <li>It used to be that data production was the bottleneck, now the bottleneck is data consumption and &quot;intelligent processing at reasonable rates&quot;</li>
 <li>They use the National Instruments LabVIEW FPGA environment targeting a Convey HC-1 platform</li>
@@ -771,6 +776,136 @@
 <li><p><a href="/papers/riedel2003.pdf">The Synthesis of Cyclic Combinational Circuits</a></p>
 </li>
 <li><p><a href="/papers/edwards2003.pdf">Making Cyclic Circuits Acyclic</a></p>
+</li>
+</ul>
+<h1>RPC</h1>
+<ul>
+<li><a href="/papers/homsirikamol2014.pdf">Can High-Level Synthesis Compete Against a Hand-Written Code in the Cryptographic Domain? A Case Study</a><ol>
+<li>Section I - Intro<ul>
+<li>HDLs are ubiquitous <ul>
+<li>Until recently HLS tools have been cost prohibitive and did not integrate with synthesis tools</li>
+<li>DSP has really been the only application that widely accepts HLS as an everyday solution</li>
+<li>This changed when Xilinx incorporated HLS in Vivado</li>
+</ul>
+</li>
+<li>Outside of DSP, no one has compared hardware synthesized via HLS vs RTL for crypto and network security applications<ul>
+<li>Limited research has been conducted that investigated the feasibility of implementing the algorithm via HLS, but does not investigate any performance tradeoffs</li>
+</ul>
+</li>
+<li>The experiment pits an AES implementation written in C and run through HLS, vs handwritten VHDL </li>
+<li>The study uses ISE 14.7 and Quartus II 13.0sp1 for Xilinx and Altera FPGAs</li>
+<li>FPGAs consisted of one high-performance and one low-cost fpga from each vendor</li>
+<li>No vendor-specific IP was used (ex DSP blocks, BRAM, etc)</li>
+</ul>
+</li>
+<li>Section II - Methodology<ul>
+<li>128-bit AES in Counter Mode (<strong>Need to learn this!</strong>)</li>
+<li><blockquote>
+<p>As our target is AES-CTR, only the encryption mode is supported in the AES-ECB</p>
+<ul>
+<li><strong>What does this mean? Why does AES-CTR only support encryption vs decryption?</strong></li>
+</ul>
+</blockquote>
+</li>
+<li>Core module: AES-ECB-ENC (AES-(Electronic Codebook)-Encryption<ul>
+<li>Counter mode is &quot;added on top of the AES-ECB-ENC unit&quot;</li>
+</ul>
+</li>
+<li>C Code used was the original reference software implementation of Rjindael<ul>
+<li>There exist more specialized C implementations but the paper seeks to perform an analysis on a &quot;typical&quot; software implementation as this research is focused on the HLS process vs AES implementations</li>
+<li>The code was modified to remove all infrastructure supporting non-128-bit operations. This design is denoted <em>HLSv0</em></li>
+</ul>
+</li>
+<li>The experiment had the following controls:<ul>
+<li>Same target HDL (VHDL)</li>
+<li>Same FPGA tools (did not use any dedicated FPGA resources)<ul>
+<li>ISE Design Suite v14.7</li>
+<li>Quartus II v13.0sp1</li>
+</ul>
+</li>
+<li>Same FPGA tool option optimization techniques <ul>
+<li>&quot;uniform optimization of FPGA tool options was facilitated by ATHENa [19]&quot;<ul>
+<li><strong>What is ATHENa?</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Section III - Reference Design<ul>
+<li>Crypto Core ports<ul>
+<li>Public Data In (pdi)<ul>
+<li>Initialization Vectors</li>
+<li>Messages</li>
+<li>Ciphertext</li>
+</ul>
+</li>
+<li>Secret Data In (sdi)<ul>
+<li>Keys</li>
+</ul>
+</li>
+<li>Data Out (do) <ul>
+<li>All output from the crypto core goes through one port</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Input format<ul>
+<li><strong>Investigate this, I don&#39;t understand why you would have multiple data segments</strong></li>
+</ul>
+</li>
+<li>Crypto Core Modules<ul>
+<li>Input processor<ul>
+<li>Two sub modules (public input and secret input)</li>
+</ul>
+</li>
+<li>bypass FIFO<ul>
+<li>Forwards any public data that does not need to be processed</li>
+</ul>
+</li>
+<li>Cryptographic core<ul>
+<li>Combines 96-bit IV with 32-bit counter and feeds that into AES-ECB-ENC where it is combined with the key</li>
+<li>Output of AES-ECB-ENC is XORed with input message to form ciphertext or plaintext<ul>
+<li><strong>How can the AES core in encryption mode produce plaintext??</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Output processor<ul>
+<li>Formats output of the crypto core to the comm. protocol</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>All modules are synthesized independently and combined in a top-level module for VHDL and using <strong>INTERFACE</strong> pragmas in HLS<ul>
+<li><strong>I don&#39;t know what an INTERFACE pragma is</strong></li>
+</ul>
+</li>
+<li>AES-ECB-ENC<ul>
+<li>Calculates all round-keys on the fly</li>
+<li>BDI (Block Data Input) and BDO (Block Data Output)</li>
+<li>1st clock cycle<ul>
+<li>State Register &lt;= BDI XOR Key;</li>
+<li>Round-Key Register &lt;= Key;</li>
+</ul>
+</li>
+<li>Intermediate clock cycles<ul>
+<li>Round-Key Register &lt;= Output of KeyUpdate;</li>
+<li><strong>Look more into this</strong></li>
+</ul>
+</li>
+<li>Final clock cycle<ul>
+<li>MixCol is bypassed</li>
+<li>Output Register &lt;= Encryption Result;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 </li>
 </ul>
 

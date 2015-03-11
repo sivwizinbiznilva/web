@@ -115,6 +115,7 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 #Fluigi
 
 - [Fluigi: Microfluidic Device Synthesis for Synthetic Biology](/papers/huang2014.pdf)
+  - 
 
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
@@ -426,6 +427,7 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [Performance-Area Improvement by Partial Reconfiguration for an Aerospace Remote Sensing Application](/papers/cardona2011.pdf)
   - Still need to read this more in-depth
   - They use DPR to facilitate computation while minimizing memory requirements (satellite) and obtain real-time behavior
+
 #FPGA Meets Biology
 - [FPGA-Based Accelerator Development for Non-Engineers](/papers/uliana2014.pdf)
   - It used to be that data production was the bottleneck, now the bottleneck is data consumption and "intelligent processing at reasonable rates"
@@ -474,3 +476,71 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [The Synthesis of Cyclic Combinational Circuits](/papers/riedel2003.pdf)
 
 - [Making Cyclic Circuits Acyclic](/papers/edwards2003.pdf)
+
+# RPC
+- [Can High-Level Synthesis Compete Against a Hand-Written Code in the Cryptographic Domain? A Case Study](/papers/homsirikamol2014.pdf)
+  1. Section I - Intro
+    - HDLs are ubiquitous 
+      - Until recently HLS tools have been cost prohibitive and did not integrate with synthesis tools
+      - DSP has really been the only application that widely accepts HLS as an everyday solution
+      - This changed when Xilinx incorporated HLS in Vivado
+    - Outside of DSP, no one has compared hardware synthesized via HLS vs RTL for crypto and network security applications
+      - Limited research has been conducted that investigated the feasibility of implementing the algorithm via HLS, but does not investigate any performance tradeoffs
+    - The experiment pits an AES implementation written in C and run through HLS, vs handwritten VHDL 
+    - The study uses ISE 14.7 and Quartus II 13.0sp1 for Xilinx and Altera FPGAs
+    - FPGAs consisted of one high-performance and one low-cost fpga from each vendor
+    - No vendor-specific IP was used (ex DSP blocks, BRAM, etc)
+  2. Section II - Methodology
+    - 128-bit AES in Counter Mode (**Need to learn this!**)
+    - > As our target is AES-CTR, only the encryption mode is supported in the AES-ECB
+      - **What does this mean? Why does AES-CTR only support encryption vs decryption?**
+    - Core module: AES-ECB-ENC (AES-(Electronic Codebook)-Encryption
+      - Counter mode is "added on top of the AES-ECB-ENC unit"
+    - C Code used was the original reference software implementation of Rjindael
+      - There exist more specialized C implementations but the paper seeks to perform an analysis on a "typical" software implementation as this research is focused on the HLS process vs AES implementations
+      - The code was modified to remove all infrastructure supporting non-128-bit operations. This design is denoted _HLSv0_
+    - The experiment had the following controls:
+      - Same target HDL (VHDL)
+      - Same FPGA tools (did not use any dedicated FPGA resources)
+        - ISE Design Suite v14.7
+        - Quartus II v13.0sp1
+      - Same FPGA tool option optimization techniques 
+        - "uniform optimization of FPGA tool options was facilitated by ATHENa [19]"
+          - **What is ATHENa?**
+  3. Section III - Reference Design
+    - Crypto Core ports
+      - Public Data In (pdi)
+        - Initialization Vectors
+        - Messages
+        - Ciphertext
+      - Secret Data In (sdi)
+        - Keys
+      - Data Out (do) 
+        - All output from the crypto core goes through one port
+    - Input format
+      - **Investigate this, I don't understand why you would have multiple data segments**
+    - Crypto Core Modules
+      - Input processor
+        - Two sub modules (public input and secret input)
+      - bypass FIFO
+        - Forwards any public data that does not need to be processed
+      - Cryptographic core
+        - Combines 96-bit IV with 32-bit counter and feeds that into AES-ECB-ENC where it is combined with the key
+        - Output of AES-ECB-ENC is XORed with input message to form ciphertext or plaintext
+          - **How can the AES core in encryption mode produce plaintext??**
+      - Output processor
+        - Formats output of the crypto core to the comm. protocol
+    - All modules are synthesized independently and combined in a top-level module for VHDL and using **INTERFACE** pragmas in HLS
+      - **I don't know what an INTERFACE pragma is**
+    - AES-ECB-ENC
+      - Calculates all round-keys on the fly
+      - BDI (Block Data Input) and BDO (Block Data Output)
+      - 1st clock cycle
+        - State Register <= BDI XOR Key;
+        - Round-Key Register <= Key;
+      - Intermediate clock cycles
+        - Round-Key Register <= Output of KeyUpdate;
+        - **Look more into this**
+      - Final clock cycle
+        - MixCol is bypassed
+        - Output Register <= Encryption Result;
