@@ -553,7 +553,7 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [(7) High-Level Synthesis Tools for Xilinx FPGAs](/papers/berkley2009.pdf)
 - [(8) Dynamic global security-aware synthesis using SystemC](/papers/burns2007.pdf)
 - [(9) Rapid Prototyping for Hardware Accelerated Elliptic Curve Public-Key Cryptosystems](/papers/ernst2001.pdf)
-- [(10) Flexible Architecture Optimization and ASIC Implementation of Group Signature Algorithm using a Customized HLS Methodology](/papers/.morioka2011.pdf)
+- [(10) Flexible Architecture Optimization and ASIC Implementation of Group Signature Algorithm using a Customized HLS Methodology](/papers/morioka2011.pdf)
 - [(11) Hardware Coprocessor Synthesis from an ANSI C Specificaton](/papers/ahuja2009.pdf)
 - [(12) High-Level Synthesis for Large Bit-Width Multipliers on FPGAs: A Case Study](/papers/quan2005.pdf)
 - [(13) NIST - Fips Pub 197 Advanced Encryption Standard](/papers/fips-197.pdf)
