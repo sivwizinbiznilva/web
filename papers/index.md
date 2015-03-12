@@ -544,3 +544,17 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
       - Final clock cycle
         - MixCol is bypassed
         - Output Register <= Encryption Result;
+### References
+- [Using Advanced Encryption Standard Counter Mode (AES-CTR) with the Internet Key Exchange version 02 (IKEv2) Protocol](/papers/shen2010.pdf)
+- [Using Advanced Encryption Standard (AES) Counter Mode with IPsec Encapsulating Security Payload (ESP)](/papers/housley2004.pdf)
+- [Hardware Coprocessor Synthesis from an ANSI C Specificaton](/papers/ahuja2009.pdf)
+- [High-Level Synthesis Tools for Xilinx FPGAs](/papers/berkley2009.pdf)
+- [High-Level Synthesis for FPGAs: From Prototyping to Deployment](/papers/cong2011.pdf)
+- [VHDL vs Bluespec System Verilog: A Case Study on a Java Embedded Architecture](/papers/gruian2008.pdf)
+- [High-Level Synthesis: Productivity, Performance, and Software Constraints](/papers/liang2012.pdf)
+- [A study of High-Level Synthesis: Promises and Challenges](/papers/rupnow2011.pdf)
+- [High Level Synthesis: Past, Present, and Future](/papers/martin2009.pdf)
+- [NIST - Fips Pub 197 Advanced Encryption Standard](/papers/fips-197.pdf)
+- [NIST - Recommendation for Block Cipher Modes of Operation](/papers/aesmodes.pdf)
+- [Reference Code in ANSI C](/papers/rijndael-alg-ref.c)
+- [ATHENa - Automated Tool for Hardware EvaluatioN: Toward Fair and Comprehensive Benchmarking of Cryptographic Hardware using FPGAs](gaj2010.pdf)
