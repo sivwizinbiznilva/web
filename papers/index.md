@@ -565,3 +565,9 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [(18) CHStone: A Benchmark Program Suite for Practical C-Based High-Level Synthesis](/papers/hara2008.pdf)
 - [(19) ATHENa - Automated Tool for Hardware EvaluatioN: Toward Fair and Comprehensive Benchmarking of Cryptographic Hardware using FPGAs](gaj2010.pdf)
 - [(20) Fair and Comprehensive Methodology for Comparing Hardware Performance of Fourteen Round Two SHA-3 Candidates Using FPGAs](/papers/gaj2010b.pdf)
+
+###My References
+- [High Level Synthesis: Where Are We? A Case Study on Matrix Multiplication](/papers/skalicky2013.pdf)
+
+# FPGA Development
+- [RTL Hardware Design Using VHDL](/papers/chuRTLText.pdf) 
