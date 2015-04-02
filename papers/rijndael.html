@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Do Work!</title>
+        <meta name="description" content="Ryan Silva's Lab Work">
+        <meta name="author" content="Ryan Silva, Branched from Todd Branchflower">
+        <link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+        <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+	<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],
+		                  ['\\(','\\)']]}});
+	 </script>
+	<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+         </script>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+	<script src="/node_modules/highlight.js/lib/index.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar navbar-inverse">
+                <div class = "navbar-inner">
+                    <a class = "brand" href="/index.html">AVLIS</a>
+                    <ul class = "nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/setup/index.html">Setup</a></li>
+                        <li><a href="/equipment/index.html">Equipment List</a></li>
+                        <li><a href="/lab/index.html">Lab Work</a></li>
+                        <li><a href="/links/index.html">Links</a></li>
+                        <li><a href="/papers/index.html">Papers</a></li>
+                        <li><a href="/TeamDocs/index.html">Team Docs</a></li>
+                        <li><a href="/ec551/index.html">EC551</a></li>
+                    </ul>
+                </div>
+            </div>
+            <pre><code><span class="hljs-comment">/* rijndael-alg-ref.c   v2.2   March 2002
+ * Reference ANSI C code
+ * authors: Paulo Barreto
+ *          Vincent Rijmen
+ *
+ * This code is placed in the public domain.
+ */</span>
+
+<span class="hljs-preprocessor">#include &lt;stdio.h&gt;</span>
+<span class="hljs-preprocessor">#include &lt;stdlib.h&gt;</span>
+
+<span class="hljs-preprocessor">#include "rijndael-alg-ref.h"</span>
+
+<span class="hljs-preprocessor">#define SC    ((BC - 4) &gt;&gt; 1)</span>
+
+<span class="hljs-preprocessor">#include "boxes-ref.dat"</span>
+
+<span class="hljs-keyword">static</span> word8 shifts[<span class="hljs-number">3</span>][<span class="hljs-number">4</span>][<span class="hljs-number">2</span>] = {
+   <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+   <span class="hljs-number">1</span>, <span class="hljs-number">3</span>,
+   <span class="hljs-number">2</span>, <span class="hljs-number">2</span>,
+   <span class="hljs-number">3</span>, <span class="hljs-number">1</span>,
+
+   <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+   <span class="hljs-number">1</span>, <span class="hljs-number">5</span>,
+   <span class="hljs-number">2</span>, <span class="hljs-number">4</span>,
+   <span class="hljs-number">3</span>, <span class="hljs-number">3</span>,
+
+   <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+   <span class="hljs-number">1</span>, <span class="hljs-number">7</span>,
+   <span class="hljs-number">3</span>, <span class="hljs-number">5</span>,
+   <span class="hljs-number">4</span>, <span class="hljs-number">4</span>
+}; 
+
+
+word8 mul(word8 a, word8 b) {
+   <span class="hljs-comment">/* multiply two elements of GF(2^m)
+    * needed for MixColumn and InvMixColumn
+    */</span>
+    <span class="hljs-keyword">if</span> (a &amp;&amp; b) <span class="hljs-keyword">return</span> Alogtable[(Logtable[a] + Logtable[b])%<span class="hljs-number">255</span>];
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">void</span> AddRoundKey(word8 a[<span class="hljs-number">4</span>][MAXBC], word8 rk[<span class="hljs-number">4</span>][MAXBC], word8 BC) {
+    <span class="hljs-comment">/* Exor corresponding text input and round key input bytes
+     */</span>
+    <span class="hljs-keyword">int</span> i, j;
+
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+           <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++) a[i][j] ^= rk[i][j];
+}
+
+<span class="hljs-keyword">void</span> ShiftRows(word8 a[<span class="hljs-number">4</span>][MAXBC], word8 d, word8 BC) {
+    <span class="hljs-comment">/* Row 0 remains unchanged
+     * The other three rows are shifted a variable amount
+     */</span>
+    word8 tmp[MAXBC];
+    <span class="hljs-keyword">int</span> i, j;
+
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">4</span>; i++) {
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++) 
+                    tmp[j] = a[i][(j + shifts[SC][i][d]) % BC];
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++) a[i][j] = tmp[j];
+    }
+}
+
+<span class="hljs-keyword">void</span> Substitution(word8 a[<span class="hljs-number">4</span>][MAXBC], word8 box[<span class="hljs-number">256</span>], word8 BC) {
+    <span class="hljs-comment">/* Replace every byte of the input by the byte at that place
+     * in the nonlinear S-box.
+         * This routine implements SubBytes and InvSubBytes
+     */</span>
+    <span class="hljs-keyword">int</span> i, j;
+
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++) a[i][j] = box[a[i][j]] ;
+}
+
+<span class="hljs-keyword">void</span> MixColumns(word8 a[<span class="hljs-number">4</span>][MAXBC], word8 BC) {
+        <span class="hljs-comment">/* Mix the four bytes of every column in a linear way
+     */</span>
+    word8 b[<span class="hljs-number">4</span>][MAXBC];
+    <span class="hljs-keyword">int</span> i, j;
+
+    <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++)
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+            b[i][j] = mul(<span class="hljs-number">2</span>,a[i][j])
+                ^ mul(<span class="hljs-number">3</span>,a[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">4</span>][j])
+                ^ a[(i + <span class="hljs-number">2</span>) % <span class="hljs-number">4</span>][j]
+                ^ a[(i + <span class="hljs-number">3</span>) % <span class="hljs-number">4</span>][j];
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++) a[i][j] = b[i][j];
+}
+
+<span class="hljs-keyword">void</span> InvMixColumns(word8 a[<span class="hljs-number">4</span>][MAXBC], word8 BC) {
+        <span class="hljs-comment">/* Mix the four bytes of every column in a linear way
+     * This is the opposite operation of Mixcolumns
+     */</span>
+    word8 b[<span class="hljs-number">4</span>][MAXBC];
+    <span class="hljs-keyword">int</span> i, j;
+
+    <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++)
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)             
+        b[i][j] = mul(<span class="hljs-number">0xe</span>,a[i][j])
+            ^ mul(<span class="hljs-number">0xb</span>,a[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">4</span>][j])                 
+            ^ mul(<span class="hljs-number">0xd</span>,a[(i + <span class="hljs-number">2</span>) % <span class="hljs-number">4</span>][j])
+            ^ mul(<span class="hljs-number">0x9</span>,a[(i + <span class="hljs-number">3</span>) % <span class="hljs-number">4</span>][j]);                        
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; BC; j++) a[i][j] = b[i][j];
+}
+
+<span class="hljs-keyword">int</span> rijndaelKeySched (word8 k[<span class="hljs-number">4</span>][MAXKC], <span class="hljs-keyword">int</span> keyBits, <span class="hljs-keyword">int</span> blockBits, 
+        word8 W[MAXROUNDS+<span class="hljs-number">1</span>][<span class="hljs-number">4</span>][MAXBC]) {
+    <span class="hljs-comment">/* Calculate the necessary round keys
+     * The number of calculations depends on keyBits and blockBits
+     */</span>
+    <span class="hljs-keyword">int</span> KC, BC, ROUNDS;
+    <span class="hljs-keyword">int</span> i, j, t, rconpointer = <span class="hljs-number">0</span>;
+    word8 tk[<span class="hljs-number">4</span>][MAXKC];   
+
+    <span class="hljs-keyword">switch</span> (keyBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: KC = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: KC = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: KC = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-keyword">switch</span> (blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: BC = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: BC = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: BC = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-keyword">switch</span> (keyBits &gt;= blockBits ? keyBits : blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: ROUNDS = <span class="hljs-number">10</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: ROUNDS = <span class="hljs-number">12</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: ROUNDS = <span class="hljs-number">14</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">3</span>); <span class="hljs-comment">/* this cannot happen */</span>
+    }
+
+
+    <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; j &lt; KC; j++)
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+            tk[i][j] = k[i][j];
+    t = <span class="hljs-number">0</span>;
+    <span class="hljs-comment">/* copy values into round key array */</span>
+    <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; (j &lt; KC) &amp;&amp; (t &lt; (ROUNDS+<span class="hljs-number">1</span>)*BC); j++, t++)
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) W[t / BC][i][t % BC] = tk[i][j];
+
+    <span class="hljs-keyword">while</span> (t &lt; (ROUNDS+<span class="hljs-number">1</span>)*BC) { 
+            <span class="hljs-comment">/* while not enough round key material calculated */</span>
+        <span class="hljs-comment">/* calculate new values */</span>
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)
+            tk[i][<span class="hljs-number">0</span>] ^= S[tk[(i+<span class="hljs-number">1</span>)%<span class="hljs-number">4</span>][KC-<span class="hljs-number">1</span>]];
+        tk[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] ^= rcon[rconpointer++];
+
+        <span class="hljs-keyword">if</span> (KC != <span class="hljs-number">8</span>)
+            <span class="hljs-keyword">for</span>(j = <span class="hljs-number">1</span>; j &lt; KC; j++)
+                <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) tk[i][j] ^= tk[i][j-<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">for</span>(j = <span class="hljs-number">1</span>; j &lt; KC/<span class="hljs-number">2</span>; j++)
+                <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) tk[i][j] ^= tk[i][j-<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) 
+                            tk[i][KC/<span class="hljs-number">2</span>] ^= S[tk[i][KC/<span class="hljs-number">2</span> - <span class="hljs-number">1</span>]];
+            <span class="hljs-keyword">for</span>(j = KC/<span class="hljs-number">2</span> + <span class="hljs-number">1</span>; j &lt; KC; j++)
+                <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) tk[i][j] ^= tk[i][j-<span class="hljs-number">1</span>];
+    }
+    <span class="hljs-comment">/* copy values into round key array */</span>
+    <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>; (j &lt; KC) &amp;&amp; (t &lt; (ROUNDS+<span class="hljs-number">1</span>)*BC); j++, t++)
+        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) W[t / BC][i][t % BC] = tk[i][j];
+    }        
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">int</span> rijndaelEncrypt (word8 a[<span class="hljs-number">4</span>][MAXBC], <span class="hljs-keyword">int</span> keyBits, <span class="hljs-keyword">int</span> blockBits, 
+        word8 rk[MAXROUNDS+<span class="hljs-number">1</span>][<span class="hljs-number">4</span>][MAXBC])
+{
+    <span class="hljs-comment">/* Encryption of one block. 
+     */</span>
+    <span class="hljs-keyword">int</span> r, BC, ROUNDS;
+
+    <span class="hljs-keyword">switch</span> (blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: BC = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: BC = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: BC = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-keyword">switch</span> (keyBits &gt;= blockBits ? keyBits : blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: ROUNDS = <span class="hljs-number">10</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: ROUNDS = <span class="hljs-number">12</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: ROUNDS = <span class="hljs-number">14</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">3</span>); <span class="hljs-comment">/* this cannot happen */</span>
+    }
+
+    <span class="hljs-comment">/* begin with a key addition
+     */</span>
+    AddRoundKey(a,rk[<span class="hljs-number">0</span>],BC); 
+
+        <span class="hljs-comment">/* ROUNDS-1 ordinary rounds
+     */</span>
+    <span class="hljs-keyword">for</span>(r = <span class="hljs-number">1</span>; r &lt; ROUNDS; r++) {
+        Substitution(a,S,BC);
+        ShiftRows(a,<span class="hljs-number">0</span>,BC);
+        MixColumns(a,BC);
+        AddRoundKey(a,rk[r],BC);
+    }
+
+    <span class="hljs-comment">/* Last round is special: there is no MixColumns
+     */</span>
+    Substitution(a,S,BC);
+    ShiftRows(a,<span class="hljs-number">0</span>,BC);
+    AddRoundKey(a,rk[ROUNDS],BC);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}   
+
+
+
+<span class="hljs-keyword">int</span> rijndaelEncryptRound (word8 a[<span class="hljs-number">4</span>][MAXBC], <span class="hljs-keyword">int</span> keyBits, <span class="hljs-keyword">int</span> blockBits, 
+        word8 rk[MAXROUNDS+<span class="hljs-number">1</span>][<span class="hljs-number">4</span>][MAXBC], <span class="hljs-keyword">int</span> rounds)
+<span class="hljs-comment">/* Encrypt only a certain number of rounds.
+ * Only used in the Intermediate Value Known Answer Test.
+ */</span>
+{
+    <span class="hljs-keyword">int</span> r, BC, ROUNDS;
+
+    <span class="hljs-keyword">switch</span> (blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: BC = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: BC = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: BC = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-keyword">switch</span> (keyBits &gt;= blockBits ? keyBits : blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: ROUNDS = <span class="hljs-number">10</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: ROUNDS = <span class="hljs-number">12</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: ROUNDS = <span class="hljs-number">14</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">3</span>); <span class="hljs-comment">/* this cannot happen */</span>
+    }
+
+    <span class="hljs-comment">/* make number of rounds sane */</span>
+    <span class="hljs-keyword">if</span> (rounds &gt; ROUNDS) rounds = ROUNDS;
+
+    <span class="hljs-comment">/* begin with a key addition
+     */</span>
+    AddRoundKey(a,rk[<span class="hljs-number">0</span>],BC);
+
+    <span class="hljs-comment">/* at most ROUNDS-1 ordinary rounds
+     */</span>
+    <span class="hljs-keyword">for</span>(r = <span class="hljs-number">1</span>; (r &lt;= rounds) &amp;&amp; (r &lt; ROUNDS); r++) {
+        Substitution(a,S,BC);
+        ShiftRows(a,<span class="hljs-number">0</span>,BC);
+        MixColumns(a,BC);
+        AddRoundKey(a,rk[r],BC);
+    }
+
+    <span class="hljs-comment">/* if necessary, do the last, special, round: 
+     */</span>
+    <span class="hljs-keyword">if</span> (rounds == ROUNDS) {
+        Substitution(a,S,BC);
+        ShiftRows(a,<span class="hljs-number">0</span>,BC);
+        AddRoundKey(a,rk[ROUNDS],BC);
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}   
+
+
+<span class="hljs-keyword">int</span> rijndaelDecrypt (word8 a[<span class="hljs-number">4</span>][MAXBC], <span class="hljs-keyword">int</span> keyBits, <span class="hljs-keyword">int</span> blockBits, 
+        word8 rk[MAXROUNDS+<span class="hljs-number">1</span>][<span class="hljs-number">4</span>][MAXBC])
+{
+    <span class="hljs-keyword">int</span> r, BC, ROUNDS;
+
+    <span class="hljs-keyword">switch</span> (blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: BC = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: BC = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: BC = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-keyword">switch</span> (keyBits &gt;= blockBits ? keyBits : blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: ROUNDS = <span class="hljs-number">10</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: ROUNDS = <span class="hljs-number">12</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: ROUNDS = <span class="hljs-number">14</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">3</span>); <span class="hljs-comment">/* this cannot happen */</span>
+    }
+
+    <span class="hljs-comment">/* To decrypt: apply the inverse operations of the encrypt routine,
+     *             in opposite order
+     * 
+     * (AddRoundKey is an involution: it 's equal to its inverse)
+     * (the inverse of Substitution with table S is Substitution with 
+         *           the inverse table of S)
+     * (the inverse of ShiftRows is ShiftRows over a suitable distance)
+     */</span>
+
+        <span class="hljs-comment">/* First the special round:
+     *   without InvMixColumns
+     *   with extra AddRoundKey
+     */</span>
+    AddRoundKey(a,rk[ROUNDS],BC);
+    Substitution(a,Si,BC);
+    ShiftRows(a,<span class="hljs-number">1</span>,BC);              
+
+    <span class="hljs-comment">/* ROUNDS-1 ordinary rounds
+     */</span>
+    <span class="hljs-keyword">for</span>(r = ROUNDS-<span class="hljs-number">1</span>; r &gt; <span class="hljs-number">0</span>; r--) {
+        AddRoundKey(a,rk[r],BC);
+        InvMixColumns(a,BC);      
+        Substitution(a,Si,BC);
+        ShiftRows(a,<span class="hljs-number">1</span>,BC);                
+    }
+
+    <span class="hljs-comment">/* End with the extra key addition
+     */</span>
+
+    AddRoundKey(a,rk[<span class="hljs-number">0</span>],BC);    
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+
+<span class="hljs-keyword">int</span> rijndaelDecryptRound (word8 a[<span class="hljs-number">4</span>][MAXBC], <span class="hljs-keyword">int</span> keyBits, <span class="hljs-keyword">int</span> blockBits, 
+    word8 rk[MAXROUNDS+<span class="hljs-number">1</span>][<span class="hljs-number">4</span>][MAXBC], <span class="hljs-keyword">int</span> rounds)
+<span class="hljs-comment">/* Decrypt only a certain number of rounds.
+ * Only used in the Intermediate Value Known Answer Test.
+ * Operations rearranged such that the intermediate values
+ * of decryption correspond with the intermediate values
+ * of encryption.
+ */</span>
+{
+    <span class="hljs-keyword">int</span> r, BC, ROUNDS;
+
+    <span class="hljs-keyword">switch</span> (blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: BC = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: BC = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: BC = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-keyword">switch</span> (keyBits &gt;= blockBits ? keyBits : blockBits) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">128</span>: ROUNDS = <span class="hljs-number">10</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">192</span>: ROUNDS = <span class="hljs-number">12</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">256</span>: ROUNDS = <span class="hljs-number">14</span>; <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span> : <span class="hljs-keyword">return</span> (-<span class="hljs-number">3</span>); <span class="hljs-comment">/* this cannot happen */</span>
+    }
+
+
+    <span class="hljs-comment">/* make number of rounds sane */</span>
+    <span class="hljs-keyword">if</span> (rounds &gt; ROUNDS) rounds = ROUNDS;
+
+        <span class="hljs-comment">/* First the special round:
+     *   without InvMixColumns
+     *   with extra AddRoundKey
+     */</span>
+    AddRoundKey(a,rk[ROUNDS],BC);
+    Substitution(a,Si,BC);
+    ShiftRows(a,<span class="hljs-number">1</span>,BC);              
+
+    <span class="hljs-comment">/* ROUNDS-1 ordinary rounds
+     */</span>
+    <span class="hljs-keyword">for</span>(r = ROUNDS-<span class="hljs-number">1</span>; r &gt; rounds; r--) {
+        AddRoundKey(a,rk[r],BC);
+        InvMixColumns(a,BC);      
+        Substitution(a,Si,BC);
+        ShiftRows(a,<span class="hljs-number">1</span>,BC);                
+    }
+
+    <span class="hljs-keyword">if</span> (rounds == <span class="hljs-number">0</span>) {
+        <span class="hljs-comment">/* End with the extra key addition
+         */</span>    
+        AddRoundKey(a,rk[<span class="hljs-number">0</span>],BC);
+    }    
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+
+        </div>
+    </body>
+</html>
