@@ -558,6 +558,27 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [(12) High-Level Synthesis for Large Bit-Width Multipliers on FPGAs: A Case Study](/papers/quan2005.pdf)
 - [(13) NIST - Fips Pub 197 Advanced Encryption Standard](/papers/fips-197.pdf)
 - [(14) NIST - Recommendation for Block Cipher Modes of Operation](/papers/aesmodes.pdf)
+  - for CTR mode, the total bits in messege = $(n-1)b+u$ where:
+    - n = positive integer representing number of bits in a string
+    - u = bit length of the last string (the last string can be a partial string)
+    - b = bit length of the other bit strings
+  - Electronic Codebook Mode
+    - Symmetric
+    - Parallelizable
+    - With the same key and same plaintext, the ciphertext will always be the same
+  - Cipher Block Chaining Mode
+    - Encryption is not parallelizable but decryption is
+![CBC](CBC.png)
+  - Cipher Feedback (CFB) Mode
+    - b is the size of the encryption block
+    - s is the size of the plaintext segment such that $1\geq s \geq b$
+    - Encryption is not parallelizable but decryption is
+![CFB](CFB.png)
+  - Counter (CTR) Mode
+    - Only uses AES encryption (no inverse cipher necessary)
+      - This is because the plaintext is not encrypted using AES, rather it is XOR'd with the AES-encrpted IV and counter.
+    - Counter must be unique across all messages that are encrypted under the given key
+![CTR](CTR.png)
 - [(15) Using Advanced Encryption Standard (AES) Counter Mode with IPsec Encapsulating Security Payload (ESP)](/papers/housley2004.pdf)
 - [(16) Using Advanced Encryption Standard Counter Mode (AES-CTR) with the Internet Key Exchange version 02 (IKEv2) Protocol](/papers/shen2010.pdf)
 - [(17a) Reference Code in ANSI C](/papers/aes/rijndael-alg-ref.c)

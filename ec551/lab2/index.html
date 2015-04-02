@@ -34,8 +34,14 @@
                     </ul>
                 </div>
             </div>
-            <h1><a href="/ec551/lab1/index.html">Lab 1</a></h1>
-<h1><a href="/ec551/lab2/index.html">Lab 2</a></h1>
+            <h1>Top-level Schematic:</h1>
+<p><img src="top.png" alt="top"></p>
+<h1>UART Rx Module Schematic</h1>
+<p><img src="uartrx.png" alt="rx"></p>
+<h1>BUSx86 Schematic</h1>
+<p><img src="busx86.png" alt="busx86"></p>
+<p>The updated processor schematic shows the addition of a processor enable signal that is controlled by the character generator FSM. This enable signal will turn off the write enable port of the program counter when the processor is disabled, thereby not allowing the processor to execute instructions. The enable signal is also tied to three new multiplexors which interface with memory. These multiplexors choose between data originating from the processor (processor is enabled) or data originating from the uart module (processor is disabled and is accepting instructions from the user).</p>
+<p>The FSM controlling the character generation (i.e., sending characters via UART) is so large that VHDL had to be used to keep track of state names in simulation. A great feature of VHDL is the ability to enumerate state names and have those enumerations carry over to simulation in human-readable form.</p>
 
         </div>
     </body>

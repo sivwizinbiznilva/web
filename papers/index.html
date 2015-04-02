@@ -920,7 +920,39 @@
 <li><a href="/papers/ahuja2009.pdf">(11) Hardware Coprocessor Synthesis from an ANSI C Specificaton</a></li>
 <li><a href="/papers/quan2005.pdf">(12) High-Level Synthesis for Large Bit-Width Multipliers on FPGAs: A Case Study</a></li>
 <li><a href="/papers/fips-197.pdf">(13) NIST - Fips Pub 197 Advanced Encryption Standard</a></li>
-<li><a href="/papers/aesmodes.pdf">(14) NIST - Recommendation for Block Cipher Modes of Operation</a></li>
+<li><a href="/papers/aesmodes.pdf">(14) NIST - Recommendation for Block Cipher Modes of Operation</a><ul>
+<li>for CTR mode, the total bits in messege = $(n-1)b+u$ where:<ul>
+<li>n = positive integer representing number of bits in a string</li>
+<li>u = bit length of the last string (the last string can be a partial string)</li>
+<li>b = bit length of the other bit strings</li>
+</ul>
+</li>
+<li>Electronic Codebook Mode<ul>
+<li>Symmetric</li>
+<li>Parallelizable</li>
+<li>With the same key and same plaintext, the ciphertext will always be the same</li>
+</ul>
+</li>
+<li>Cipher Block Chaining Mode<ul>
+<li>Encryption is not parallelizable but decryption is<br><img src="CBC.png" alt="CBC"></li>
+</ul>
+</li>
+<li>Cipher Feedback (CFB) Mode<ul>
+<li>b is the size of the encryption block</li>
+<li>s is the size of the plaintext segment such that $1\geq s \geq b$</li>
+<li>Encryption is not parallelizable but decryption is<br><img src="CFB.png" alt="CFB"></li>
+</ul>
+</li>
+<li>Counter (CTR) Mode<ul>
+<li>Only uses AES encryption (no inverse cipher necessary)<ul>
+<li>This is because the plaintext is not encrypted using AES, rather it is XOR&#39;d with the AES-encrpted IV and counter.</li>
+</ul>
+</li>
+<li>Counter must be unique across all messages that are encrypted under the given key<br><img src="CTR.png" alt="CTR"></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="/papers/housley2004.pdf">(15) Using Advanced Encryption Standard (AES) Counter Mode with IPsec Encapsulating Security Payload (ESP)</a></li>
 <li><a href="/papers/shen2010.pdf">(16) Using Advanced Encryption Standard Counter Mode (AES-CTR) with the Internet Key Exchange version 02 (IKEv2) Protocol</a></li>
 <li><a href="/papers/aes/rijndael-alg-ref.c">(17a) Reference Code in ANSI C</a></li>
