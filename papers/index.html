@@ -898,7 +898,22 @@
 </li>
 <li>Final clock cycle<ul>
 <li>MixCol is bypassed</li>
-<li>Output Register &lt;= Encryption Result;<h3>References</h3>
+<li>Output Register &lt;= Encryption Result;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Section IV - Results and Discussion<ul>
+<li>HLSv0</li>
+<li>HLSv1<ul>
+<li><strong>Key update stuff Learn this!</strong></li>
+<li>Removal of logtables using <em>xtime</em><ul>
+<li><em>xtime</em> is the process of multiplying a polynomial $b(x)$ by $x$ resulting in $b_{7}x^{8}+b_{6}x^{7}+b_{5}x^{6}+b_{4}x^{5}+b_{3}x^{4}+b_{2}x^{3}+b_{1}x^{2}+b_{0}{x}$</li>
+<li>since mixcolumns only requires multiplication by $0x02$ and $0x03$ in $GF(2^8)$, you can just use xtime<ul>
+<li>mixcolumns transformation: $c(x)=03x^3+01x^2+01x+02$<br>$b(x)=c(x)\otimes a(x)$<br>$\begin{bmatrix}<br>b_0 \\<br>b_1 \\<br>b_2 \\<br>b_3<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>02 &amp; 03 &amp; 01 &amp; 01 \\<br>01 &amp; 02 &amp; 03 &amp; 01 \\<br>01 &amp; 01 &amp; 02 &amp; 03 \\<br>03 &amp; 01 &amp; 01 &amp; 02<br>\end{bmatrix}<br>\begin{bmatrix}<br>a_0 \\<br>a_1 \\<br>a_2 \\<br>a_3<br>\end{bmatrix}$</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -908,6 +923,9 @@
 </li>
 </ol>
 </li>
+</ul>
+<h3>References</h3>
+<ul>
 <li><a href="/papers/martin2009.pdf">(1) High Level Synthesis: Past, Present, and Future</a></li>
 <li><a href="/papers/rupnow2011.pdf">(3) A study of High-Level Synthesis: Promises and Challenges</a></li>
 <li><a href="/papers/liang2012.pdf">(4) High-Level Synthesis: Productivity, Performance, and Software Constraints</a></li>

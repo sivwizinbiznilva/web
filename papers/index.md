@@ -544,6 +544,35 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
       - Final clock cycle
         - MixCol is bypassed
         - Output Register <= Encryption Result;
+  4. Section IV - Results and Discussion
+    - HLSv0
+    - HLSv1
+      - **Key update stuff Learn this!**
+      - Removal of logtables using _xtime_
+        - _xtime_ is the process of multiplying a polynomial $b(x)$ by $x$ resulting in $b\_{7}x^{8}+b\_{6}x^{7}+b\_{5}x^{6}+b\_{4}x^{5}+b\_{3}x^{4}+b\_{2}x^{3}+b\_{1}x^{2}+b\_{0}{x}$
+        - since mixcolumns only requires multiplication by $0x02$ and $0x03$ in $GF(2^8)$, you can just use xtime
+          - mixcolumns transformation: $c(x)=03x^3+01x^2+01x+02$
+$b(x)=c(x)\otimes a(x)$
+$\begin{bmatrix}
+	b\_0 \\\\
+	b\_1 \\\\
+	b\_2 \\\\
+	b\_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+	02 & 03 & 01 & 01 \\\\
+	01 & 02 & 03 & 01 \\\\
+	01 & 01 & 02 & 03 \\\\
+	03 & 01 & 01 & 02 
+\end{bmatrix}
+\begin{bmatrix}
+	a\_0 \\\\
+	a\_1 \\\\
+	a\_2 \\\\
+	a\_3 
+\end{bmatrix}$
+
 ### References
 - [(1) High Level Synthesis: Past, Present, and Future](/papers/martin2009.pdf)
 - [(3) A study of High-Level Synthesis: Promises and Challenges](/papers/rupnow2011.pdf)
