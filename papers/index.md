@@ -573,6 +573,24 @@ $\begin{bmatrix}
 	a\_3 
 \end{bmatrix}$
 
+**The mod 4 operation (% 4) in the code block below is what ensures the indecies are correct in the above matrix multiplication**
+```
+void MixColumns(word8 a[4][MAXBC], word8 BC) {
+        /* Mix the four bytes of every column in a linear way
+     */
+    word8 b[4][MAXBC];
+    int i, j;
+
+    for(j = 0; j < BC; j++)
+        for(i = 0; i < 4; i++)
+            b[i][j] = mul(2,a[i][j])
+                ^ mul(3,a[(i + 1) % 4][j])
+                ^ a[(i + 2) % 4][j]
+                ^ a[(i + 3) % 4][j];
+    for(i = 0; i < 4; i++)
+        for(j = 0; j < BC; j++
+```
+
 ### References
 - [(1) High Level Synthesis: Past, Present, and Future](/papers/martin2009.pdf)
 - [(3) A study of High-Level Synthesis: Promises and Challenges](/papers/rupnow2011.pdf)

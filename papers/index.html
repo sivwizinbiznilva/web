@@ -924,6 +924,21 @@
 </ol>
 </li>
 </ul>
+<p><strong>The mod 4 operation (% 4) in the code block below is what ensures the indecies are correct in the above matrix multiplication</strong></p>
+<pre><code>void MixColumns(word8 a[<span class="hljs-link_label">4</span>][<span class="hljs-link_reference">MAXBC</span>], word8 BC) {
+<span class="hljs-code">        /* Mix the four bytes of every column in a linear way</span>
+<span class="hljs-code">     */</span>
+<span class="hljs-code">    word8 b[4][MAXBC];</span>
+<span class="hljs-code">    int i, j;</span>
+
+<span class="hljs-code">    for(j = 0; j &lt; BC; j++)</span>
+<span class="hljs-code">        for(i = 0; i &lt; 4; i++)</span>
+<span class="hljs-code">            b[i][j] = mul(2,a[i][j])</span>
+<span class="hljs-code">                ^ mul(3,a[(i + 1) % 4][j])</span>
+<span class="hljs-code">                ^ a[(i + 2) % 4][j]</span>
+<span class="hljs-code">                ^ a[(i + 3) % 4][j];</span>
+<span class="hljs-code">    for(i = 0; i &lt; 4; i++)</span>
+<span class="hljs-code">        for(j = 0; j &lt; BC; j++</span></code></pre>
 <h3>References</h3>
 <ul>
 <li><a href="/papers/martin2009.pdf">(1) High Level Synthesis: Past, Present, and Future</a></li>
@@ -972,7 +987,7 @@
 </ul>
 </li>
 <li><a href="/papers/housley2004.pdf">(15) Using Advanced Encryption Standard (AES) Counter Mode with IPsec Encapsulating Security Payload (ESP)</a><ul>
-<li>Using the same key negates the key:<br>What happens if the encryptor XORs the same key stream with two<br>different plaintexts? Suppose two plaintext byte sequences P1, P2,<br>P3 and Q1, Q2, Q3 are both encrypted with key stream K1, K2, K3. The<br>two corresponding ciphertexts are:<br>(P1 XOR K1), (P2 XOR K2), (P3 XOR K3)<br>(Q1 XOR K1), (Q2 XOR K2), (Q3 XOR K3)<br>If both of these two ciphertext streams are exposed to an attacker,<br>then a catastrophic failure of confidentiality results, since:<br>(P1 XOR K1) XOR (Q1 XOR K1) = P1 XOR Q1<br>(P2 XOR K2) XOR (Q2 XOR K2) = P2 XOR Q2<br>(P3 XOR K3) XOR (Q3 XOR K3) = P3 </li>
+<li>Using the same key negates the key:<br>What happens if the encryptor XORs the same key stream with two<br>different plaintexts? Suppose two plaintext byte sequences P1, P2,<br>P3 and Q1, Q2, Q3 are both encrypted with key stream K1, K2, K3. The<br>two corresponding ciphertexts are:<br>(P1 XOR K1), (P2 XOR K2), (P3 XOR K3)<br>(Q1 XOR K1), (Q2 XOR K2), (Q3 XOR K3)<br>If both of these two ciphertext streams are exposed to an attacker,<br>then a catastrophic failure of confidentiality results, since:<br>(P1 XOR K1) XOR (Q1 XOR K1) = P1 XOR Q1<br>(P2 XOR K2) XOR (Q2 XOR K2) = P2 XOR Q2<br>(P3 XOR K3) XOR (Q3 XOR K3) = P3 XOR Q3</li>
 </ul>
 </li>
 <li><a href="/papers/shen2010.pdf">(16) Using Advanced Encryption Standard Counter Mode (AES-CTR) with the Internet Key Exchange version 02 (IKEv2) Protocol</a></li>
