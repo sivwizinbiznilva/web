@@ -609,6 +609,18 @@ $\begin{bmatrix}
     - Counter must be unique across all messages that are encrypted under the given key
 ![CTR](CTR.png)
 - [(15) Using Advanced Encryption Standard (AES) Counter Mode with IPsec Encapsulating Security Payload (ESP)](/papers/housley2004.pdf)
+  - Using the same key negates the key:
+What happens if the encryptor XORs the same key stream with two
+different plaintexts? Suppose two plaintext byte sequences P1, P2,
+P3 and Q1, Q2, Q3 are both encrypted with key stream K1, K2, K3. The
+two corresponding ciphertexts are:
+(P1 XOR K1), (P2 XOR K2), (P3 XOR K3)
+(Q1 XOR K1), (Q2 XOR K2), (Q3 XOR K3)
+If both of these two ciphertext streams are exposed to an attacker,
+then a catastrophic failure of confidentiality results, since:
+(P1 XOR K1) XOR (Q1 XOR K1) = P1 XOR Q1
+(P2 XOR K2) XOR (Q2 XOR K2) = P2 XOR Q2
+(P3 XOR K3) XOR (Q3 XOR K3) = P3 XOR Q3
 - [(16) Using Advanced Encryption Standard Counter Mode (AES-CTR) with the Internet Key Exchange version 02 (IKEv2) Protocol](/papers/shen2010.pdf)
 - [(17a) Reference Code in ANSI C](/papers/rijndael.html)
 - [(17b) Header File for Ref Code](/papers/aes/rijndael-alg-ref_h.html)
