@@ -17,6 +17,7 @@ Then start nginx
 $ sudo nginx
 ```
 2. Get [node.js](http://nodejs.org/download/)
+3. Clone Todd's forked version of marked for pretty tables!!!!
 5. Clone your dotfiles
 ```bash
 $ git clone http://github.com/sivwizinbiznilva/dotfiles
