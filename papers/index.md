@@ -652,6 +652,7 @@ then a catastrophic failure of confidentiality results, since:
 - [High Level Synthesis: Where Are We? A Case Study on Matrix Multiplication](/papers/skalicky2013.pdf)
 - [This explains log tables](http://www.cs.utsa.edu/~wagner/laws/FFM.html)
 - [BluespecVerilog by example](/papers/bsv.pdf)
+- [Math Background](/papers/aes_math.pdf)
 
 # FPGA Development
 - [RTL Hardware Design Using VHDL](/papers/chuRTLText.pdf) 
