@@ -27,3 +27,7 @@ title = 'Lab Log'
 | November 2014 | - | [November Notes](/notes/Nov2014.html) | - | [3 Nov 2014](/notes/meeting/3Nov2014.html), [17 Nov 2014](/notes/meeting/17Nov2014.html) |
 
 ##[EC551 Slides](http://slides.ryanjsilva.com/slides/EC551)
+
+##Big Easy Driver Equations
+$Itripmax=V_{ref}/(8*Rs)$
+[source](http://www.schmalzhaus.com/BigEasyDriver/BigEasyDriver_UserManal.pdf)
