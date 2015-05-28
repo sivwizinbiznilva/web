@@ -28,6 +28,7 @@ title = 'Lab Log'
 
 ##[EC551 Slides](http://slides.ryanjsilva.com/slides/EC551)
 
-##Big Easy Driver Equations
+##Easy Driver Equations
 $Itripmax=V_{ref}/(8*Rs)$
-[source](http://www.schmalzhaus.com/BigEasyDriver/BigEasyDriver_UserManal.pdf)
+Big Easy Driver Rs = .11ohms [source](http://www.schmalzhaus.com/BigEasyDriver/BigEasyDriver_UserManal.pdf)
+Easy Driver Rs = 0.75ohms [source](https://forum.sparkfun.com/viewtopic.php?f=14&t=39610)
