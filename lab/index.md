@@ -32,3 +32,5 @@ title = 'Lab Log'
 $Itripmax=V_{ref}/(8*Rs)$
 Big Easy Driver Rs = .11ohms [source](http://www.schmalzhaus.com/BigEasyDriver/BigEasyDriver_UserManal.pdf)
 Easy Driver Rs = 0.75ohms [source](https://forum.sparkfun.com/viewtopic.php?f=14&t=39610)
+Pololu with Nema11 ref V = 382.857mV
+$Desired_Vref=Imax/(0.7*2.5)
