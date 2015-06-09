@@ -29,11 +29,18 @@ title = 'Lab Log'
 ##[EC551 Slides](http://slides.ryanjsilva.com/slides/EC551)
 
 ##Easy Driver Equations
-$Itripmax=V_{ref}/(8*Rs)$
+
+$$
+Itripmax=V_{ref}/(8*Rs)
+$$
+
 Big Easy Driver Rs = .11ohms [source](http://www.schmalzhaus.com/BigEasyDriver/BigEasyDriver_UserManal.pdf)
 Easy Driver Rs = 0.75ohms [source](https://forum.sparkfun.com/viewtopic.php?f=14&t=39610)
 Pololu with Nema11 ref V = 382.857mV
-$Desired_Vref=Imax/(0.7*2.5)$
+
+$$
+DesiredVref=I_{max}/(0.7*2.5)
+$$
 
 [Calculate Max Stepper Motor Speed](http://www.daycounter.com/Calculators/Stepper-Motor-Calculator.phtml)
 [Nema 17 Datasheet](http://www.fasttobuy.com/42hs4013a4-sumtor-twophase-stepper-motor-42byg-new_p24104.html)
