@@ -111,6 +111,8 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 #Microfluidic Valve Control
 - [Build your own microfluidic valve controller](https://sites.google.com/site/rafaelsmicrofluidicspage/valve-controllers)
 - [Use syringes to test a microfluidic chip](http://web.stanford.edu/group/foundry/Testing%20Using%20Syringes.html)
+- [Microfluidic Very large scale integration (mVLSI) with integrated micromechanical valves](/papers/araci2012.pdf)
+- [Microfluidic valve array control system integrating a fluid demultiplexer circuit](/papers/kawai2015.pdf)
 
 #Fluigi
 
