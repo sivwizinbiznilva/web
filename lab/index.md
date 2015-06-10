@@ -44,3 +44,6 @@ $$
 
 [Calculate Max Stepper Motor Speed](http://www.daycounter.com/Calculators/Stepper-Motor-Calculator.phtml)
 [Nema 17 Datasheet](http://www.fasttobuy.com/42hs4013a4-sumtor-twophase-stepper-motor-42byg-new_p24104.html)
+
+##DIY Automated Valve Controller
+[Expensive, Complicated, Precise (pressure regulated)](https://sites.google.com/site/rafaelsmicrofluidicspage/valve-controllers)
