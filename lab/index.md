@@ -54,3 +54,13 @@ $$
 
 ##DIY Automated Valve Controller
 [Expensive, Complicated, Precise (pressure regulated)](https://sites.google.com/site/rafaelsmicrofluidicspage/valve-controllers)
+
+# June 2015
+- There are many open-source microfluidic solutions that exist right now
+  - I am not trying to make another one
+- The problem with open source solutions is that there's no way to know if they're any good until you've invested a lot of time and energy into building it
+  - "Linux is free if you value your time at zero"
+  - I will do the work for you and present the results in a useful way
+- I am building a tool that aggregates many open source solutions, vets them in a meaningful way, and documents them according to a standardized
+- Entire papers have been written that try to help scientists navigate the open-source domain
+  - "Getting started with open-hardware: Development and control of microfluidic devices" Costa et al Jul 2014 Electrophoresis
