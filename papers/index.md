@@ -470,6 +470,9 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [Fault Injection Results of Linux Operating on an FPGA Embedded Platform](/papers/monson2010.pdf)
 - [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
 
+# 3D Printed Microfluidics
+- [3D printed molds for non-planar PDMS microfluidic channels](/papers/3duf_object.pdf)
+- [Direct, one-step molding of 3D-printed structures for convenient fabrication of truly 3D PDMS microfluidic chips](/papers/3duf.pdf)
 # Syringe Pump
 - [Klavins Lab Wiki](https://depts.washington.edu/soslab/turbidostat/pmwiki/pmwiki.php?n=ConstructionManual.SyringePump)
 - [Open-Source Syringe Pump Library](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107216#s2)
