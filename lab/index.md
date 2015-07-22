@@ -64,3 +64,11 @@ $$
 - I am building a tool that aggregates many open source solutions, vets them in a meaningful way, and documents them according to a standardized
 - Entire papers have been written that try to help scientists navigate the open-source domain
   - "Getting started with open-hardware: Development and control of microfluidic devices" Costa et al Jul 2014 Electrophoresis
+
+# July 2015
+- Use unibody design to make a transposer
+  1. Use tubing as channels (i.e. don't cast channels)
+  2. Use NEMA motors attached directly to a 3D printed end to make two "roller"-type peristaltic pumps...maybe using skateboard bearings?
+  3. Use MIT syringe pump or servo attached to some blunt end to create a valve mechanism
+    - Essentially apply pressure on top of the tubing to squeeze it shut
+  4. Create a 3D chassis to hold the above experiment

@@ -471,7 +471,7 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
 
 # 3D Printed Microfluidics
-- [3D printed molds for non-planar PDMS microfluidic channels](/papers/3duf_object.pdf)
+- [3D printed molds for non-planar PDMS microfluidic channels](/papers/3duf_objet.pdf)
 - [Direct, one-step molding of 3D-printed structures for convenient fabrication of truly 3D PDMS microfluidic chips](/papers/3duf.pdf)
 # Syringe Pump
 - [Klavins Lab Wiki](https://depts.washington.edu/soslab/turbidostat/pmwiki/pmwiki.php?n=ConstructionManual.SyringePump)
@@ -661,3 +661,6 @@ then a catastrophic failure of confidentiality results, since:
 
 # FPGA Development
 - [RTL Hardware Design Using VHDL](/papers/chuRTLText.pdf) 
+
+# CNC Microfluidics
+- [Fluidic Heart Micropump](http://www.instructables.com/id/Fluidic-heart-micropump/)
