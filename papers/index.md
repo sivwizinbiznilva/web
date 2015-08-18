@@ -122,6 +122,7 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+- [The origins and the future of microfluidics](/papers/whitesides2006.pdf)
 
 - [Theory and Analysis of Generalized Mixing and Dilution of Biochemical Fluids Using Digital Microfluidic Biochips](/papers/roy2014.pdf)
 
