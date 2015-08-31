@@ -123,6 +123,18 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 
 #Microfluidics
 - [The origins and the future of microfluidics](/papers/whitesides2006.pdf)
+  - Motivations for microfluidics:
+    - Analysis - Higher sensitivity, higher resolution, lower amounts of sample, lower time
+      - Gas-phase chromatography
+      - High pressure liquid chromatography
+      - Capillary electrophoresis
+    - Defense - Field deployable uF systems for chem/bio threat detection
+      - Main stimulus ($$) for academic uF research
+    - Genomics - Need for increased throughput, sensitivity and resolution in sequencing 
+    - Microelectronics - Directly apply fabrication methods (photolithography) used in silicon uElectronics and MEMS to uF
+      - Silicon and glass are often inappropriate for bio analysis (silicon is expensive, opaque) 
+
+> Revolutions in technology require both a broad range of different types of component and subsystem, and their integration into complete, functional systems. The field of microfluidics is in early adolescence and still lacks both these essential requirements, in addition to the integration of components into systems that can be used by non-experts. As a field, it is a combination of unlimited promise, pimples and incomplete commitment. This is a very exciting time for the field, but we still do not know exactly what it will be when it grows up.
 
 - [Theory and Analysis of Generalized Mixing and Dilution of Biochemical Fluids Using Digital Microfluidic Biochips](/papers/roy2014.pdf)
 
@@ -665,3 +677,15 @@ then a catastrophic failure of confidentiality results, since:
 
 # CNC Microfluidics
 - [Fluidic Heart Micropump](http://www.instructables.com/id/Fluidic-heart-micropump/)
+
+# Bonding plastics to PDMS
+- [Microfluidic channel fabrication by PDMS-interface bonding](/papers/chow2005.pdf)
+  - Plasma treating doesn't work for heterogenius surfaces. 
+    - Only make van der Waals contact
+  - Instead mix PDMS 3:1 and bond at 170 degC for 3h
+    - This works but melts channels for PMMA
+  - Instead spin coat flat PMMA substrate with PDMS, partially cure, then bond channel-embossed PMMA
+    - Won't work for me, no membrane, can't have both substrates channel-embossed :(
+- [Polymer microfabrication technologies for microfluidic systems](/papers/becker2008.pdf)
+  - Overview of materials and characterization
+    - Tg for PC is 148 degC
