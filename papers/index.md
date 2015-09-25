@@ -677,6 +677,25 @@ then a catastrophic failure of confidentiality results, since:
 
 # CNC Microfluidics
 - [Fluidic Heart Micropump](http://www.instructables.com/id/Fluidic-heart-micropump/)
+- [PMMA/PDMS Valves and pumpsfor disposable microfluidics](/papers/zhang2009.pdf)
+  - PMMA valve (laser ablation)
+  - [Supplementary info](zhang2009_sup.pdf)
+- [Programmable diagnostic devices made from paper and tape](/papers/martinez2010.pdf)
+  - Uses the Ace 50106 carpet tape
+  - Also uF FPGA using pressure from a pen to "program" the chip
+  - [Supplementary Material](/papers/martinez2010_sup.pdf)
+- [Programmable Microfluidic Digital Logic for the Autonomous Lab on a Chip](/papers/ahrar2014.pdf)
+  - Uses CNC 
+- [Semi-autonomous liquid handling via on-chip pneumatic digital logic](/papers/nguyen2012.pdf)
+  - Uses only a vacuum to control the chip by treating valves as transistors
+  ![valve array](/papers/transistorValve.gif)
+- [Pneumatic oscillator circuits for timing and control of integrated microfluidics](/papers/duncan2009)
+  - I can mill their oscillator ring!
+- [Scaling of pneumatic digital logic circuits](/papers/duncan2015.pdf)
+  - Very detailed valve design description
+  - Uses [this mill](https://www.haascnc.com/mt_spec1.asp?id=MINIMILL&webID=MINI_MILL_VMC) that costs $34,995
+  - Circular valve diameter of 0.762mm was best
+  ![valve](valveCharacterization.gif)
 
 # Bonding plastics to PDMS
 - [Microfluidic channel fabrication by PDMS-interface bonding](/papers/chow2005.pdf)
@@ -689,3 +708,4 @@ then a catastrophic failure of confidentiality results, since:
 - [Polymer microfabrication technologies for microfluidic systems](/papers/becker2008.pdf)
   - Overview of materials and characterization
     - Tg for PC is 148 degC
+- [Bonding of thermoplastic polymer microfluidics](/papers/tsao2009.pdf)
