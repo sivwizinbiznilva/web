@@ -956,20 +956,16 @@
 </li>
 </ul>
 <p><strong>The mod 4 operation (% 4) in the code block below is what ensures the indecies are correct in the above matrix multiplication</strong></p>
-<pre><code>void MixColumns(word8 a[<span class="hljs-link_label">4</span>][<span class="hljs-link_reference">MAXBC</span>], word8 BC) {
-<span class="hljs-code">        /* Mix the four bytes of every column in a linear way</span>
-<span class="hljs-code">     */</span>
-<span class="hljs-code">    word8 b[4][MAXBC];</span>
-<span class="hljs-code">    int i, j;</span>
-
-<span class="hljs-code">    for(j = 0; j &lt; BC; j++)</span>
-<span class="hljs-code">        for(i = 0; i &lt; 4; i++)</span>
-<span class="hljs-code">            b[i][j] = mul(2,a[i][j])</span>
-<span class="hljs-code">                ^ mul(3,a[(i + 1) % 4][j])</span>
-<span class="hljs-code">                ^ a[(i + 2) % 4][j]</span>
-<span class="hljs-code">                ^ a[(i + 3) % 4][j];</span>
-<span class="hljs-code">    for(i = 0; i &lt; 4; i++)</span>
-<span class="hljs-code">        for(j = 0; j &lt; BC; j++</span></code></pre>
+<p>void MixColumns(word8 a[4][MAXBC], word8 BC) {<br>        /<em> Mix the four bytes of every column in a linear way
+     </em>/<br>    word8 b[4][MAXBC];<br>    int i, j;</p>
+<pre><code><span class="hljs-keyword">for</span>(<span class="hljs-built_in">j</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">j</span> &lt; BC; <span class="hljs-built_in">j</span>++)
+    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">i</span> &lt; <span class="hljs-number">4</span>; <span class="hljs-built_in">i</span>++)
+        b<span class="hljs-matrix">[i]</span><span class="hljs-matrix">[j]</span> = mul(<span class="hljs-number">2</span>,a<span class="hljs-matrix">[i]</span><span class="hljs-matrix">[j]</span>)
+            ^ mul(<span class="hljs-number">3</span>,a<span class="hljs-matrix">[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">4</span>]</span><span class="hljs-matrix">[j]</span>)
+            ^ a<span class="hljs-matrix">[(i + <span class="hljs-number">2</span>) % <span class="hljs-number">4</span>]</span><span class="hljs-matrix">[j]</span>
+            ^ a<span class="hljs-matrix">[(i + <span class="hljs-number">3</span>) % <span class="hljs-number">4</span>]</span><span class="hljs-matrix">[j]</span>;
+<span class="hljs-keyword">for</span>(<span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">i</span> &lt; <span class="hljs-number">4</span>; <span class="hljs-built_in">i</span>++)
+    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">j</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">j</span> &lt; BC; <span class="hljs-built_in">j</span>++</code></pre>
 <h3>References</h3>
 <ul>
 <li><a href="/papers/martin2009.pdf">(1) High Level Synthesis: Past, Present, and Future</a></li>
@@ -998,13 +994,14 @@
 </ul>
 </li>
 <li>Cipher Block Chaining Mode<ul>
-<li>Encryption is not parallelizable but decryption is<br><img src="CBC.png" alt="CBC"></li>
+<li>Encryption is not parallelizable but decryption is</li>
+<li><a href="CBC.png">CBC</a></li>
 </ul>
 </li>
 <li>Cipher Feedback (CFB) Mode<ul>
 <li>b is the size of the encryption block</li>
 <li>s is the size of the plaintext segment such that $1\geq s \geq b$</li>
-<li>Encryption is not parallelizable but decryption is<br><img src="CFB.png" alt="CFB"></li>
+<li>Encryption is not parallelizable but decryption is<br>-<a href="CFB.png">CFB</a></li>
 </ul>
 </li>
 <li>Counter (CTR) Mode<ul>
@@ -1012,7 +1009,8 @@
 <li>This is because the plaintext is not encrypted using AES, rather it is XOR&#39;d with the AES-encrpted IV and counter.</li>
 </ul>
 </li>
-<li>Counter must be unique across all messages that are encrypted under the given key<br><img src="CTR.png" alt="CTR"></li>
+<li>Counter must be unique across all messages that are encrypted under the given key</li>
+<li><a href="CTR.png">CTR</a></li>
 </ul>
 </li>
 </ul>
@@ -1043,6 +1041,11 @@
 </ul>
 <h1>CNC Microfluidics</h1>
 <ul>
+<li><a href="/papers/guckenberger2015.pdf">Micromilling: a method for ultra-rapid prototyping of plastic microfluidic devices</a><ul>
+<li><img src="/papers/feedsspeeds.gif" alt="feeds/speeds chart"></li>
+<li><a href="/papers/guckenberger2015_sup.pdf">supplementary material</a></li>
+</ul>
+</li>
 <li><a href="http://www.instructables.com/id/Fluidic-heart-micropump/">Fluidic Heart Micropump</a></li>
 <li><a href="/papers/zhang2009.pdf">PMMA/PDMS Valves and pumpsfor disposable microfluidics</a><ul>
 <li>PMMA valve (laser ablation)</li>
@@ -1099,6 +1102,50 @@
 </ul>
 </li>
 <li><a href="/papers/tsao2009.pdf">Bonding of thermoplastic polymer microfluidics</a></li>
+</ul>
+<h1>Open Source Labware</h1>
+<ul>
+<li><a href="/papers/leeuw2013.pdf">In situ measurements of phytoplankton fluorescence using low cost electronics</a><ul>
+<li><a href="/papers/leeuw2013_sup.pdf">supplementary material</a></li>
+</ul>
+</li>
+</ul>
+<h1>Centrifugal Microfluidics</h1>
+<ul>
+<li><a href="/papers/madou2001.pdf">Design and Fabrication of CD-like Microfluidic Platforms for Diagnostics: Microfluidic Functions</a><ul>
+<li><img src="/papers/calibrationrpms.png" alt="calibrationrpms"></li>
+</ul>
+</li>
+<li><a href="http://mmadou.eng.uci.edu/research_cd.html">Madou Group Webpage</a></li>
+<li><a href="/papers/lai2004.pdf">Design of a Compact Disk-like microfluidic platform for enzyme-linked immunosorbent assay</a><ul>
+<li><img src="/papers/capvalve.png" alt="capvalve"></li>
+</ul>
+</li>
+<li><a href="/papers/siegrist2009.pdf">Microfluidics for biological analysis: Triumphs and hurdles of CD platforms</a></li>
+<li><a href="/papers/ducree2007.pdf">The centrifugal microfluidic bio-disk platform</a></li>
+<li><a href="/papers/madou1998.pdf">LabCD: a centrifuge-based microfluidic platform for diagnostics</a><ul>
+<li>The original cd-based microfluidic paper</li>
+</ul>
+</li>
+<li><a href="/papers/madou2006.pdf">Lab on a CD</a></li>
+<li><a href="/papers/duffy1999.pdf">Microfabricated Centrifugal Microfluidic System Characterization and Multiple Enzymatic Assays</a></li>
+<li><a href="/papers/kong2015">Lab-on-a-CD: A Fully Integrated Molecular Diagnostic System</a><ul>
+<li>Review paper. Great valve section.</li>
+</ul>
+</li>
+<li><a href="http://link.springer.com/article/10.1007/s10404-009-0523-5/fulltext.html">Serial siphon valving for centrifugal microfluidic platforms</a><ul>
+<li>Siphon valves. Requires surface treatments.</li>
+</ul>
+</li>
+<li><a href="/papers/bagwe2011.pdf">Development of a centrifugal microfludic device for separation and sorting in biological fluids</a><ul>
+<li>MS Thesis</li>
+<li>Detailed, albeit naive, fabrication technique but gets it done.</li>
+</ul>
+</li>
+</ul>
+<h1>Stepper Motor Refs</h1>
+<ul>
+<li><a href="https://github.com/pololu/drv8835-motor-driver-rpi">Python library for polou motor driver</a></li>
 </ul>
 
         </div>

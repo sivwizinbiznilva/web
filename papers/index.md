@@ -592,7 +592,7 @@ $\begin{bmatrix}
 \end{bmatrix}$
 
 **The mod 4 operation (% 4) in the code block below is what ensures the indecies are correct in the above matrix multiplication**
-```
+
 void MixColumns(word8 a[4][MAXBC], word8 BC) {
         /* Mix the four bytes of every column in a linear way
      */
@@ -607,7 +607,6 @@ void MixColumns(word8 a[4][MAXBC], word8 BC) {
                 ^ a[(i + 3) % 4][j];
     for(i = 0; i < 4; i++)
         for(j = 0; j < BC; j++
-```
 
 ### References
 - [(1) High Level Synthesis: Past, Present, and Future](/papers/martin2009.pdf)
@@ -633,17 +632,17 @@ void MixColumns(word8 a[4][MAXBC], word8 BC) {
     - With the same key and same plaintext, the ciphertext will always be the same
   - Cipher Block Chaining Mode
     - Encryption is not parallelizable but decryption is
-![CBC](CBC.png)
+    - [CBC](CBC.png)
   - Cipher Feedback (CFB) Mode
     - b is the size of the encryption block
     - s is the size of the plaintext segment such that $1\geq s \geq b$
     - Encryption is not parallelizable but decryption is
-![CFB](CFB.png)
+    -[CFB](CFB.png)
   - Counter (CTR) Mode
     - Only uses AES encryption (no inverse cipher necessary)
       - This is because the plaintext is not encrypted using AES, rather it is XOR'd with the AES-encrpted IV and counter.
     - Counter must be unique across all messages that are encrypted under the given key
-![CTR](CTR.png)
+    - [CTR](CTR.png)
 - [(15) Using Advanced Encryption Standard (AES) Counter Mode with IPsec Encapsulating Security Payload (ESP)](/papers/housley2004.pdf)
   - Using the same key negates the key:
 What happens if the encryptor XORs the same key stream with two
@@ -676,6 +675,9 @@ then a catastrophic failure of confidentiality results, since:
 - [RTL Hardware Design Using VHDL](/papers/chuRTLText.pdf) 
 
 # CNC Microfluidics
+- [Micromilling: a method for ultra-rapid prototyping of plastic microfluidic devices](/papers/guckenberger2015.pdf)
+  - ![feeds/speeds chart](/papers/feedsspeeds.gif)
+  - [supplementary material](/papers/guckenberger2015_sup.pdf)
 - [Fluidic Heart Micropump](http://www.instructables.com/id/Fluidic-heart-micropump/)
 - [PMMA/PDMS Valves and pumpsfor disposable microfluidics](/papers/zhang2009.pdf)
   - PMMA valve (laser ablation)
@@ -709,3 +711,30 @@ then a catastrophic failure of confidentiality results, since:
   - Overview of materials and characterization
     - Tg for PC is 148 degC
 - [Bonding of thermoplastic polymer microfluidics](/papers/tsao2009.pdf)
+
+# Open Source Labware
+- [In situ measurements of phytoplankton fluorescence using low cost electronics](/papers/leeuw2013.pdf)
+  - [supplementary material](/papers/leeuw2013_sup.pdf)
+
+#Centrifugal Microfluidics
+- [Design and Fabrication of CD-like Microfluidic Platforms for Diagnostics: Microfluidic Functions](/papers/madou2001.pdf)
+  - ![calibrationrpms](/papers/calibrationrpms.png)
+- [Madou Group Webpage](http://mmadou.eng.uci.edu/research_cd.html)
+- [Design of a Compact Disk-like microfluidic platform for enzyme-linked immunosorbent assay](/papers/lai2004.pdf)
+  - ![capvalve](/papers/capvalve.png)
+- [Microfluidics for biological analysis: Triumphs and hurdles of CD platforms](/papers/siegrist2009.pdf)
+- [The centrifugal microfluidic bio-disk platform](/papers/ducree2007.pdf)
+- [LabCD: a centrifuge-based microfluidic platform for diagnostics](/papers/madou1998.pdf)
+  - The original cd-based microfluidic paper
+- [Lab on a CD](/papers/madou2006.pdf)
+- [Microfabricated Centrifugal Microfluidic System Characterization and Multiple Enzymatic Assays](/papers/duffy1999.pdf)
+- [Lab-on-a-CD: A Fully Integrated Molecular Diagnostic System](/papers/kong2015)
+  - Review paper. Great valve section.
+- [Serial siphon valving for centrifugal microfluidic platforms](http://link.springer.com/article/10.1007/s10404-009-0523-5/fulltext.html)
+  - Siphon valves. Requires surface treatments.
+- [Development of a centrifugal microfludic device for separation and sorting in biological fluids](/papers/bagwe2011.pdf)
+  - MS Thesis
+  - Detailed, albeit naive, fabrication technique but gets it done.
+
+#Stepper Motor Refs
+- [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
