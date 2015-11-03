@@ -735,6 +735,16 @@ then a catastrophic failure of confidentiality results, since:
 - [Development of a centrifugal microfludic device for separation and sorting in biological fluids](/papers/bagwe2011.pdf)
   - MS Thesis
   - Detailed, albeit naive, fabrication technique but gets it done.
+- [Design and fabrication of polymer-based microfluidic platforms for biomems applications](/papers/lai2003.pdf)
+  - PhD thesis
+  - Detailed fabrication technique for Madou devices
+- [Design and Fabrication of CD-Like Microfluidic Platforms for Diagnostics: Polymer-BBased Microfabrication](/papers/lee2001.pdf)
+  - Provides bonding data for adhesive tape
+- [Centrifuge-based fluidic platforms](/papers/zoval2004.pdf)
+- [Centrifugal microfluidics with integrated sensing microdome optodes for multiion detection](/papers/watts1007.pdf)
+  - Explicitly states that the width of channels in the standard calibration design refers only to the the channels connecting the "circular reservoirs and the burst valves"
+- [Investigation into the applicability of the centrifugal microfluidics platform for the development of protein-ligand assays incorporating enhanced green fluorescent protein as a fluorescent reporter](/papers/puckett2004.pdf)
+  - Provides dimensions
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
