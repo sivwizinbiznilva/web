@@ -749,6 +749,9 @@ then a catastrophic failure of confidentiality results, since:
   - Great dimensions
   - I can build this, but is it useful?
 - [Centrifugal microfluidics for biomedical applications](/papers/gorkin2009.pdf)
+- [Centrifugal microfluidic flow and mixing with applications in cell culture and cell lysing](/papers/yong2013.pdf)
+  - Well-characterized mixers
+  - PhD thesis
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
