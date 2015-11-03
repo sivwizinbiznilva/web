@@ -745,6 +745,10 @@ then a catastrophic failure of confidentiality results, since:
   - Explicitly states that the width of channels in the standard calibration design refers only to the the channels connecting the "circular reservoirs and the burst valves"
 - [Investigation into the applicability of the centrifugal microfluidics platform for the development of protein-ligand assays incorporating enhanced green fluorescent protein as a fluorescent reporter](/papers/puckett2004.pdf)
   - Provides dimensions
+- [Reciprocating flow-based centrifugal microfluidics mixer](/papers/noroozi2009.pdf)
+  - Great dimensions
+  - I can build this, but is it useful?
+- [Centrifugal microfluidics for biomedical applications](/papers/gorkin2009.pdf)
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
