@@ -72,3 +72,23 @@ $$
   3. Use MIT syringe pump or servo attached to some blunt end to create a valve mechanism
     - Essentially apply pressure on top of the tubing to squeeze it shut
   4. Create a 3D chassis to hold the above experiment
+
+# November 2015
+- Calculate burst frequency (RPM) for given channel dimensions using water
+$$
+RPM=\sqrt{\frac{\gamma\sin\theta}{\pi^2\rho\Delta R\overline{R}D_h^n}}*60
+$$
+
+where
+
+$\gamma$ = 0.072 N/m (ref)[/papers/bagwe2011.pdf]
+$\theta$ = 90$\unicode{176}$ 
+$\rho$=1000 kg/m^3
+$\Delta R$=R2-R1
+$\overline{R}=\frac{R2+R1}{2}$
+$D_h=\frac{4A}{C}=\frac{4(lw)}{2(l+w)}=\frac{2(lw)}{l+w}$
+
+  - C = contact line length (perimeter of channel)
+
+n = 1.41 for rectangular cross-sections
+

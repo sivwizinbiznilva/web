@@ -752,6 +752,8 @@ then a catastrophic failure of confidentiality results, since:
 - [Centrifugal microfluidic flow and mixing with applications in cell culture and cell lysing](/papers/yong2013.pdf)
   - Well-characterized mixers
   - PhD thesis
+- [Design analyses of capillary burst valves in centrifugal microfluidics](/papers/zeng2000.pdf)
+  - Provides correction factor for triangular and rectangular hydraulic diameter calculations
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
