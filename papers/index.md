@@ -738,6 +738,15 @@ then a catastrophic failure of confidentiality results, since:
 - [Design and fabrication of polymer-based microfluidic platforms for biomems applications](/papers/lai2003.pdf)
   - PhD thesis
   - Detailed fabrication technique for Madou devices
+  - Benefits of CNC over PDMS are:
+    - Different feature depths
+    - Rapid prototyping
+    - Low cost
+    - No material limitations
+  - Tradeoffs of CNC milling
+    - Works if feature size is greater than 50um
+    - Low aspect ratio (h vs w limited to less than 2)
+    - up to 10% error in dimensions
 - [Design and Fabrication of CD-Like Microfluidic Platforms for Diagnostics: Polymer-BBased Microfabrication](/papers/lee2001.pdf)
   - Provides bonding data for adhesive tape
 - [Centrifuge-based fluidic platforms](/papers/zoval2004.pdf)
