@@ -766,6 +766,10 @@ then a catastrophic failure of confidentiality results, since:
 - [Displacement pumping of liquids radially inward on centrifugal microfluidic platforms in motion](/papers/kong2012.pdf)
 - [Analysis and experiment of centrifugal force for microfluidic ELISA CD platform](/papers/ibrahim2010.pdf)
   - Provides reservoir depths
+- [How the capillary burst microvalve works](/papers/cho2007.pdf)
+  - Describes that mathematical models for burst conditions work for either hydrophilic or hydrophobic materials
+- [Theoretical development and critical analysis of burst frequency equations for passive valves on centrifugal microfluidic platforms](/papers/thio2013)
+  - Says 1D equations apply to hydrophobic and hydrophilic materials
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
