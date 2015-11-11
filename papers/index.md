@@ -711,6 +711,7 @@ then a catastrophic failure of confidentiality results, since:
   - Overview of materials and characterization
     - Tg for PC is 148 degC
 - [Bonding of thermoplastic polymer microfluidics](/papers/tsao2009.pdf)
+- [Contact angles for various thermopolymers](https://www.accudynetest.com/polytable_03.html?sortby=contact_angle)
 
 # Open Source Labware
 - [In situ measurements of phytoplankton fluorescence using low cost electronics](/papers/leeuw2013.pdf)
