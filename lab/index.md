@@ -92,3 +92,20 @@ $D_h=\frac{4A}{C}=\frac{4(lw)}{2(l+w)}=\frac{2(lw)}{l+w}$
 
 n = 1.41 for rectangular cross-sections
 
+# Draper Visit 10 Nov 2015
+
+- SCENT
+  - Standoff WMD detection
+  - Low power / minimal auxiliary components
+  - Small scale (10cm)
+  - RFID??
+  - 
+
+- Crossover
+  - Accessible uF imply either minimal or reproducible auxiliary components
+  - Controllable fluid motion via capillary force in hydrophobic materials
+    - Hydrophilic surface treatments wear off after ~30min - 24hrs
+  - Currently exploring in the context of accessible centrifugal uF platforms
+    - Hydrophilic surface treatments (possibly) raise barrier 
+  - Low power silicon nanowire pH sensing
+   

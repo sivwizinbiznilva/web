@@ -768,7 +768,7 @@ then a catastrophic failure of confidentiality results, since:
   - Provides reservoir depths
 - [How the capillary burst microvalve works](/papers/cho2007.pdf)
   - Describes that mathematical models for burst conditions work for either hydrophilic or hydrophobic materials
-- [Theoretical development and critical analysis of burst frequency equations for passive valves on centrifugal microfluidic platforms](/papers/thio2013)
+- [Theoretical development and critical analysis of burst frequency equations for passive valves on centrifugal microfluidic platforms](/papers/thio2013.pdf)
   - Says 1D equations apply to hydrophobic and hydrophilic materials
 
 #Stepper Motor Refs
