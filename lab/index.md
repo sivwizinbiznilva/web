@@ -90,7 +90,7 @@ $D_h=\frac{4A}{C}=\frac{4(lw)}{2(l+w)}=\frac{2(lw)}{l+w}$
 
   - C = contact line length (perimeter of channel)
 
-n = 1.41 for rectangular cross-sections
+n = 1.14 for rectangular cross-sections
 
 # Draper Visit 10 Nov 2015
 

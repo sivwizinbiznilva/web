@@ -713,6 +713,10 @@ then a catastrophic failure of confidentiality results, since:
 - [Bonding of thermoplastic polymer microfluidics](/papers/tsao2009.pdf)
 - [Contact angles for various thermopolymers](https://www.accudynetest.com/polytable_03.html?sortby=contact_angle)
 
+# Microfluidics in labware
+- [Microfluidic System for Automated Cell-based Assays](/papers/lee2007.pdf)
+  - Integrates a microfluidic under a 96-well plate frame
+
 # Open Source Labware
 - [In situ measurements of phytoplankton fluorescence using low cost electronics](/papers/leeuw2013.pdf)
   - [supplementary material](/papers/leeuw2013_sup.pdf)
@@ -772,6 +776,7 @@ then a catastrophic failure of confidentiality results, since:
 - [Theoretical development and critical analysis of burst frequency equations for passive valves on centrifugal microfluidic platforms](/papers/thio2013.pdf)
   - Says 1D equations apply to hydrophobic and hydrophilic materials
   - [supplementary material](/papers/thio2013_sup.pdf)
+- [Analysis and experiment of capillary valves for microfluidics on a rotating disk](/papers/chen2008.pdf)
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
