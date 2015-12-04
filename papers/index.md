@@ -211,6 +211,8 @@ Biocoder as shown in this paper: - Introduced here:
 ![analog](/papers/analog.png)
 
 - [Voigt Nor Gate](/papers/voigtNORGate.pdf)
+  - [Voigt Sup](/papers/voigtNORGate_sup.pdf)
+  - Liquid culture won't work because once the output signal is activated, you have a glitch.
 
 # Cell to Cell communication applications
 - [ Spatial Structure Facilitates Cooperation in a Social Dilemma: Empirical Evidence from a Bacterial Community](/papers/felix2013.pdf)
@@ -717,9 +719,21 @@ then a catastrophic failure of confidentiality results, since:
 - [Microfluidic System for Automated Cell-based Assays](/papers/lee2007.pdf)
   - Integrates a microfluidic under a 96-well plate frame
 
+# Cell-Free Microfluidics
+- [Cell-Free Protein Synthesis in Microfluidic Array Devices](/papers/mei2007.pdf)
+  - Performs cell-free reaction in milled 96-well plate
+- [Protein synthesis in a device with nanoporous membranes and microchannels](/papers/mei2010.pdf)
+  - In-depth dimensions and in a LOC article
+
 # Open Source Labware
 - [In situ measurements of phytoplankton fluorescence using low cost electronics](/papers/leeuw2013.pdf)
   - [supplementary material](/papers/leeuw2013_sup.pdf)
+
+# Intra-cellular wiring for logic
+- [Artificial cell-cell communication as an emerging tool in synthetic biology applications](/papers/hennig2015.pdf)
+  - One approach to the finite amount of orthogonal signals is to use artificial signals
+- [Multicellular computing using conjugation for wiring](/papers/gonimoreno2013.pdf)
+  - Another approach. Looks like recombinant DNA?
 
 #Centrifugal Microfluidics
 - [Design and Fabrication of CD-like Microfluidic Platforms for Diagnostics: Microfluidic Functions](/papers/madou2001.pdf)
