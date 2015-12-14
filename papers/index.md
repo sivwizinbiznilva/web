@@ -113,6 +113,7 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Use syringes to test a microfluidic chip](http://web.stanford.edu/group/foundry/Testing%20Using%20Syringes.html)
 - [Microfluidic Very large scale integration (mVLSI) with integrated micromechanical valves](/papers/araci2012.pdf)
 - [Microfluidic valve array control system integrating a fluid demultiplexer circuit](/papers/kawai2015.pdf)
+- [Getting started with open-hardware: development and control of microfluidic devices](/papers/dacosta2014.pdf)
 
 # Syringe Pump
 - [Hackaday syringe pump](https://hackaday.io/project/1838-open-syringe-pump)
@@ -127,6 +128,14 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+- [Let there be chip-towards rapid prototyping of microfluidic devices: one-step manufacturing processes](/papers/waldbaur2011)
+  - Review paper on one-step uF processes
+- [Let there be chip-towards rapid prototyping of microfluidic devices: one-step manufacturing processes](/papers/waldbaur2011)
+  - Review paper on one-step uF processes
+  - Includes FDM printing
+  - Includes FDM printing
+- [Maufacturing a PDMS microfluidic device via a Silicon Wafer Master](/papers/manuf_pdms.pdf)
+  - MIT open course with detailed instructions on how to make a device using photolithography
 - [Low-tech Microfluidics](http://science-practice.com/blog/2015/01/29/low-tech-microfluidics/)
 - [The origins and the future of microfluidics](/papers/whitesides2006.pdf)
   - Motivations for microfluidics:
@@ -497,6 +506,8 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 # Syringe Pump
 - [Klavins Lab Wiki](https://depts.washington.edu/soslab/turbidostat/pmwiki/pmwiki.php?n=ConstructionManual.SyringePump)
 - [Open-Source Syringe Pump Library](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107216#s2)
+- [Open-Source Hardware for the Lab](http://blog.labfab.cc/)
+- [Effect of processing conditions on the bonding quality of FDM polymer filaments](/papers/sun2008.pdf)
 
 # EC551
 - [The Synthesis of Cyclic Combinational Circuits](/papers/riedel2003.pdf)
@@ -739,6 +750,8 @@ then a catastrophic failure of confidentiality results, since:
 # Open Source Labware
 - [In situ measurements of phytoplankton fluorescence using low cost electronics](/papers/leeuw2013.pdf)
   - [supplementary material](/papers/leeuw2013_sup.pdf)
+- [Open-source Lab](http://www.appropedia.org/Open-source_Lab)
+  - MTU repository for all open-source labware
 
 # Intra-cellular wiring for logic
 - [Artificial cell-cell communication as an emerging tool in synthetic biology applications](/papers/hennig2015.pdf)
