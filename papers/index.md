@@ -114,6 +114,11 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Microfluidic Very large scale integration (mVLSI) with integrated micromechanical valves](/papers/araci2012.pdf)
 - [Microfluidic valve array control system integrating a fluid demultiplexer circuit](/papers/kawai2015.pdf)
 
+# Syringe Pump
+- [Hackaday syringe pump](https://hackaday.io/project/1838-open-syringe-pump)
+- [Syringe pump rack](http://hackaday.com/2015/05/29/pump-up-the-volume-with-the-3d-printed-syringe-pump-rack/)
+- [MTU syringe pump](http://www.appropedia.org/Open-source_syringe_pump)
+
 #Fluigi
 
 - [Fluigi: Microfluidic Device Synthesis for Synthetic Biology](/papers/huang2014.pdf)
