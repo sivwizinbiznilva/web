@@ -122,6 +122,7 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+- [Low-tech Microfluidics](http://science-practice.com/blog/2015/01/29/low-tech-microfluidics/)
 - [The origins and the future of microfluidics](/papers/whitesides2006.pdf)
   - Motivations for microfluidics:
     - Analysis - Higher sensitivity, higher resolution, lower amounts of sample, lower time
@@ -724,6 +725,11 @@ then a catastrophic failure of confidentiality results, since:
   - Performs cell-free reaction in milled 96-well plate
 - [Protein synthesis in a device with nanoporous membranes and microchannels](/papers/mei2010.pdf)
   - In-depth dimensions and in a LOC article
+- [Fabrication optimization of a miniaturized array device for cell-free protein synthesis](/papers/khnouf2011.pdf)
+
+#Cell-Free Systems
+- [Linear DNA for rapid prototyping of synthetic biological circuits in an e coli based txtl cell free system](/papers/sun2013)
+- [Protocols for implementing an e coli based txtl cell-free expression system for synthetic biology](/papers/sun2013_jove.pdf)
 
 # Open Source Labware
 - [In situ measurements of phytoplankton fluorescence using low cost electronics](/papers/leeuw2013.pdf)
