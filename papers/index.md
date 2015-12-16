@@ -718,7 +718,7 @@ then a catastrophic failure of confidentiality results, since:
   - Circular valve diameter of 0.762mm was best
   ![valve](valveCharacterization.gif)
 
-# Bonding plastics to PDMS
+# Bonding plastics 
 - [Microfluidic channel fabrication by PDMS-interface bonding](/papers/chow2005.pdf)
   - Plasma treating doesn't work for heterogenius surfaces. 
     - Only make van der Waals contact
@@ -731,6 +731,14 @@ then a catastrophic failure of confidentiality results, since:
     - Tg for PC is 148 degC
 - [Bonding of thermoplastic polymer microfluidics](/papers/tsao2009.pdf)
 - [Contact angles for various thermopolymers](https://www.accudynetest.com/polytable_03.html?sortby=contact_angle)
+- [Adhesive Bonding of Polymeric Microfluidic Devices](/papers/goh2009.pdf)
+  - Includes review of different specific brands of PSA
+- [Wax-bonding of 3D microfluidic chips](/papers/gong2010.pdf)
+- [Miniature flow-injection analysis manifold created by micromimlling](/papers/rainelli2003.pdf)
+  - Uses engraving bit and characterizes the resultant trapezoidal channel profile
+  - Bonding performed using screws
+- [A facile route for irreversible bonding of plastic-PDMS hybrid microdevices at room temperature](/papers/tang2009.pdf)
+  - Uses a plasma bonder and silane
 
 # Microfluidics in labware
 - [Microfluidic System for Automated Cell-based Assays](/papers/lee2007.pdf)
@@ -815,6 +823,17 @@ then a catastrophic failure of confidentiality results, since:
   - Says 1D equations apply to hydrophobic and hydrophilic materials
   - [supplementary material](/papers/thio2013_sup.pdf)
 - [Analysis and experiment of capillary valves for microfluidics on a rotating disk](/papers/chen2008.pdf)
+
+# Microfluidic Fluid Routing
+- [Simultaneous design and placement of multiplexed chemical processing systems on microchips](/papers/pfeiffer2004.pdf)
+  - Tiles primitives
+- [Microfluidic very large-scale integration for biochips: technology, testing and fault-tolerant design](/papers/araci2015.pdf)
+  - Includes netlist picture that would be useful for describing the useufulness of the transposer
+- [Droplet routing in the synthesis of digital microfluidic biochips](/papers/su2006.pdf)
+  - Shows that droplet routing is a very well established field
+  - Shows the usefulness of fluid swapping
+- [Continuous-Flow biochips: current platforms and emerging research challenges](/papers/pop2015.pdf)
+  - Outlines IEEE session on emerging research challenges
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
