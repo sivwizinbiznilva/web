@@ -837,3 +837,7 @@ then a catastrophic failure of confidentiality results, since:
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
+
+#FPGA Architecture
+- [FPGA Routing Structures: A Novel Switch Block](/papers/masud1998.pdf)
+  - ![architecture](/papers/fpgaArch.png)
