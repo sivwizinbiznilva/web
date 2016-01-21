@@ -109,3 +109,6 @@ n = 1.14 for rectangular cross-sections
     - Hydrophilic surface treatments (possibly) raise barrier 
   - Low power silicon nanowire pH sensing
    
+# Jan 2016
+- Pump wiring
+  - Beware motor of polarities when connecting to dissimilar motor driver chips!
