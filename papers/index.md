@@ -710,7 +710,7 @@ then a catastrophic failure of confidentiality results, since:
 - [Semi-autonomous liquid handling via on-chip pneumatic digital logic](/papers/nguyen2012.pdf)
   - Uses only a vacuum to control the chip by treating valves as transistors
   ![valve array](/papers/transistorValve.gif)
-- [Pneumatic oscillator circuits for timing and control of integrated microfluidics](/papers/duncan2009)
+- [Pneumatic oscillator circuits for timing and control of integrated microfluidics](/papers/duncan2013.pdf)
   - I can mill their oscillator ring!
 - [Scaling of pneumatic digital logic circuits](/papers/duncan2015.pdf)
   - Very detailed valve design description
