@@ -711,12 +711,15 @@ then a catastrophic failure of confidentiality results, since:
   - Uses only a vacuum to control the chip by treating valves as transistors
   ![valve array](/papers/transistorValve.gif)
 - [Pneumatic oscillator circuits for timing and control of integrated microfluidics](/papers/duncan2013.pdf)
+  - Uses vacuum driven valves that are normally closed (analogous to NMOS transistors)
   - I can mill their oscillator ring!
 - [Scaling of pneumatic digital logic circuits](/papers/duncan2015.pdf)
   - Very detailed valve design description
   - Uses [this mill](https://www.haascnc.com/mt_spec1.asp?id=MINIMILL&webID=MINI_MILL_VMC) that costs $34,995
   - Circular valve diameter of 0.762mm was best
   ![valve](valveCharacterization.gif)
+- [Development and multiplexed control of latching pneumatic valves using microfluidic logical structures](/papers/grover2006.pdf)
+  - Original paper describing the valves I'm using
 
 # Bonding plastics 
 - [Microfluidic channel fabrication by PDMS-interface bonding](/papers/chow2005.pdf)
@@ -739,6 +742,10 @@ then a catastrophic failure of confidentiality results, since:
   - Bonding performed using screws
 - [A facile route for irreversible bonding of plastic-PDMS hybrid microdevices at room temperature](/papers/tang2009.pdf)
   - Uses a plasma bonder and silane
+- [A review of microvalves](/papers/oh2006.pdf)
+  - Reviews all bonding techniques
+- [Semi-disposable microvalves for use with microfabricated devices or microchips](/papers/yuen2000.pdf)
+  - Uses 3M double-sided tape as elastomer
 
 # Microfluidics in labware
 - [Microfluidic System for Automated Cell-based Assays](/papers/lee2007.pdf)
