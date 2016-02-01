@@ -128,9 +128,7 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
-- [Let there be chip-towards rapid prototyping of microfluidic devices: one-step manufacturing processes](/papers/waldbaur2011)
-  - Review paper on one-step uF processes
-- [Let there be chip-towards rapid prototyping of microfluidic devices: one-step manufacturing processes](/papers/waldbaur2011)
+- [Let there be chip-towards rapid prototyping of microfluidic devices: one-step manufacturing processes](/papers/waldbaur2011.pdf)
   - Review paper on one-step uF processes
   - Includes FDM printing
   - Includes FDM printing
