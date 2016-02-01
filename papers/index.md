@@ -720,6 +720,8 @@ then a catastrophic failure of confidentiality results, since:
   - Original paper describing the valves I'm using
 
 # Bonding plastics 
+- [Polydimethylsiloxane as a material for fabricating microfluidic deices](/papers/cooper2002)
+  - lists 5psi as the bonding strength of van der waals force
 - [Microfluidic channel fabrication by PDMS-interface bonding](/papers/chow2005.pdf)
   - Plasma treating doesn't work for heterogenius surfaces. 
     - Only make van der Waals contact
