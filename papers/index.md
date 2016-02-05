@@ -128,6 +128,11 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+- [End-to-end automated microfluidic platform for synthetic biology: from design to functional analysis](/papers/linshiz2016.pdf)
+  - Automated platform
+  - 2D Array of valves
+  - Software to generate valve sequence for DNA assembly
+  - Etched in glass with PDMS blank as elastomeric membrane
 - [Let there be chip-towards rapid prototyping of microfluidic devices: one-step manufacturing processes](/papers/waldbaur2011.pdf)
   - Review paper on one-step uF processes
   - Includes FDM printing
