@@ -129,6 +129,7 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 
 #Microfluidics
 - [End-to-end automated microfluidic platform for synthetic biology: from design to functional analysis](/papers/linshiz2016.pdf)
+  - Article Doug sent out on 5 Feb
   - Automated platform
   - 2D Array of valves
   - Software to generate valve sequence for DNA assembly
@@ -848,6 +849,10 @@ then a catastrophic failure of confidentiality results, since:
   - Shows the usefulness of fluid swapping
 - [Continuous-Flow biochips: current platforms and emerging research challenges](/papers/pop2015.pdf)
   - Outlines IEEE session on emerging research challenges
+
+# Uses for Microfluidic Fluid Routing
+- [Continuous Perfusion Microfluidic Cell Culture Array for High-Throughput Cell-Based Assays](/papers/huang2005.pdf)
+  - Connects output of gradient generator to an array of chambers
 
 #Stepper Motor Refs
 - [Python library for polou motor driver](https://github.com/pololu/drv8835-motor-driver-rpi)
