@@ -128,6 +128,9 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+- [Programmable Microfluidics](/papers/theis2007.pdf)
+  - Powerpoint talk
+  - Incorporates all fluigi-like things
 - [End-to-end automated microfluidic platform for synthetic biology: from design to functional analysis](/papers/linshiz2016.pdf)
   - Article Doug sent out on 5 Feb
   - Automated platform
@@ -504,7 +507,12 @@ In a Prisoner's Dilemma, the Sucker's payout is negative for their model (only l
 - [Fault Injection Results of Linux Operating on an FPGA Embedded Platform](/papers/monson2010.pdf)
 - [A new methodology to implement the AES algorithm using partial and dynamic reconfiguration](/papers/granado2009.pdf)
 
+# Relevant Committee Papers
+- [Maskless writing of microfluidics: Rapid prototyping of 3D microfluidics using scratch on a polymer substrate](/papers/do2010.pdf)
+  - Klapperich lab. Uses plotter/cutter.
+
 # 3D Printed Microfluidics
+- [3D Printed microfluidics for biological applications](/papers/ho2015.pdf)
 - [Customizable 3D Printed 'Plug and Play' Millifluidic Devices for Programmable Fluidics](/papers/tsuda2015.pdf)
   - Printed using FDM printer...woah
 - [3D printed molds for non-planar PDMS microfluidic channels](/papers/3duf_objet.pdf)
@@ -702,6 +710,7 @@ then a catastrophic failure of confidentiality results, since:
 - [RTL Hardware Design Using VHDL](/papers/chuRTLText.pdf) 
 
 # CNC Microfluidics
+- [Rapid prototyping of thermoplastic microfluidic devices for medium volume production by combining hot embossing and milling](/papers/konstantinou.pdf)
 - [Micromilling: a method for ultra-rapid prototyping of plastic microfluidic devices](/papers/guckenberger2015.pdf)
   - ![feeds/speeds chart](/papers/feedsspeeds.gif)
   - [supplementary material](/papers/guckenberger2015_sup.pdf)
@@ -842,6 +851,12 @@ then a catastrophic failure of confidentiality results, since:
 - [Analysis and experiment of capillary valves for microfluidics on a rotating disk](/papers/chen2008.pdf)
 
 # Microfluidic Fluid Routing
+- [Simultanious fabrication of PDMS through-holes for three-dimensional microfluidic applications](/papers/mosadegh2010.pdf)
+  - punch mask
+  - through holes
+- [Fabrication of a poly(dimethylsiloxane) membrane with well-defined through-holes for three-dimensional microfluidic networks](/papers/kang2008.pdf)
+  - punch mask
+  - through holes
 - [Simultaneous design and placement of multiplexed chemical processing systems on microchips](/papers/pfeiffer2004.pdf)
   - Tiles primitives
 - [Microfluidic very large-scale integration for biochips: technology, testing and fault-tolerant design](/papers/araci2015.pdf)
