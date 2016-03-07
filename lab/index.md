@@ -112,3 +112,13 @@ n = 1.14 for rectangular cross-sections
 # Jan 2016
 - Pump wiring
   - Beware motor of polarities when connecting to dissimilar motor driver chips!
+
+# Mar 2016
+##Synthetic Biology and the Emergence of Soft Engineering
+Much has been said about the purported reproducibility crisis currently plaguing the field of psychology. The questions raised about the rigorousness of research in psychology have also been leveled upon [data analysis in the scientific community as a whole](http://onlinelibrary.wiley.com/doi/10.1111/j.1740-9713.2015.00827.x/pdf). Replicability and reproducibility are core tenants of the scientific method. [It can be argued that](http://pps.sagepub.com/content/10/6/886.full) scientific research lacking these two characteristics is not, by definition, science at all. If engineering [is defined as the application of science](http://www.britannica.com/technology/engineering), what, then, does it say for a discipline to claim to be engineering while applying principles that do not seem to adhere to the scientific method? This may be an interesting data point in the analysis of a field's scientific value: can its principles be applied using the engineering method?
+
+- Specification is important in reproducing the results an experiment
+- Over-specification can often nullify, or prohibitively limit, the application value of a scientific principle (i.e., it may be good science in that it's replicable but it is probably not useful to an engineer, which is where I think synbio lies)
+  - "[I don't care that [cells] in your lab, when the temperature is exactly 69 degrees, and it is high noon on the fifth Wednesday of the month, that such and such will happen](http://www.wired.com/2016/03/psychology-crisis-whether-crisis/)"
+
+
