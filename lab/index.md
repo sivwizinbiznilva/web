@@ -121,4 +121,7 @@ Much has been said about the purported reproducibility crisis currently plaguing
 - Over-specification can often nullify, or prohibitively limit, the application value of a scientific principle (i.e., it may be good science in that it's replicable but it is probably not useful to an engineer, which is where I think synbio lies)
   - "[I don't care that [cells] in your lab, when the temperature is exactly 69 degrees, and it is high noon on the fifth Wednesday of the month, that such and such will happen](http://www.wired.com/2016/03/psychology-crisis-whether-crisis/)"
 
-
+##Universal switching blocks
+[See this paper](http://delivery.acm.org/10.1145/230000/225886/p80-chang.pdf?ip=128.197.164.56&id=225886&acc=ACTIVE%20SERVICE&key=73B3886B1AEFC4BB.786B8A3DF006C606.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=761723843&CFTOKEN=24770461&__acm__=1457976578_af3ab1044123ea2fd103adee0d857681)
+- Definition 2.1 lists inequalites composed of Type-$i$ connections. The definition of these connections is found in figure 5.
+- Essentially states that the number of nets corresponding to each type of connection (straight through the blockor to either adjacent side) cannot be greater than the number of terminals on each side of the block, $W$

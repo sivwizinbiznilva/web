@@ -10,7 +10,7 @@
 [How to make glass microfluidic devices](http://myfluidics.blogspot.com/2014/02/fabrication-of-glass-microfluidic.html)
 [Micado](http://groups.csail.mit.edu/cag/micado/index.html)
 [David Kongs Mediated Matter](http://matter.media.mit.edu/tools)
-
+[It's time the Software People and Mechanical People Sat Down and Had a Talk](http://tinyurl.com/jo5a44b)
 
 #Woodworking
 [Edison Lamp](https://www.buildsomething.com/plans/P3522304C1BE68ACE/ModernDeskLamp)

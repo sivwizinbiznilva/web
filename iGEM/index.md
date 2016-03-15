@@ -19,3 +19,6 @@ We are USTC with significantly less students and significantly less access to bi
 With the manpower/resources we have, we have no reason to expect better results than USTC
 
 [Doug's LCP iGEM Project Descriptions](/iGEM/Densmore_LivingComputingProject_UROP_2016.docx)
+
+[Whenisgood results](http://whenisgood.net/k4qxyka/results/ih9hah3)
+[Whenisgood edit](http://whenisgood.net/k4qxyka/edit/ih9hah3)
