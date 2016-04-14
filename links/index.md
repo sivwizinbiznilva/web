@@ -11,6 +11,7 @@
 [Micado](http://groups.csail.mit.edu/cag/micado/index.html)
 [David Kongs Mediated Matter](http://matter.media.mit.edu/tools)
 [It's time the Software People and Mechanical People Sat Down and Had a Talk](http://tinyurl.com/jo5a44b)
+[Van der waals force and PDMS](http://www.microfluidicfuture.com/blog/pdms-the-favorite-material-of-microfluidics-for-now)
 
 #Woodworking
 [Edison Lamp](https://www.buildsomething.com/plans/P3522304C1BE68ACE/ModernDeskLamp)

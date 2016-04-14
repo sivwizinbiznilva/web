@@ -128,6 +128,8 @@ $$\frac{dy}{dt}=k'+k\left(\frac{K^n}{K^n+x^n}\right)$$
 - [Integration of microfluidics into the synthetic biology design flow](/papers/huang2014_flow.pdf)
 
 #Microfluidics
+- [Van der waals force and PDMS](http://www.microfluidicfuture.com/blog/pdms-the-favorite-material-of-microfluidics-for-now)
+  - Cites 5psi as maximum pressure
 - [Programmable Microfluidics](/papers/theis2007.pdf)
   - Powerpoint talk
   - Incorporates all fluigi-like things
