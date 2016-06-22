@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Do Work!</title>
+        <meta name="description" content="Ryan Silva's Lab Work">
+        <meta name="author" content="Ryan Silva, Branched from Todd Branchflower">
+        <link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+        <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'></script>
+	<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],
+		                  ['\\(','\\)']]}});
+	 </script>
+	<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+         </script>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+	<script src="/node_modules/highlight.js/lib/index.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar navbar-inverse">
+                <div class = "navbar-inner">
+                    <a class = "brand" href="/index.html">AVLIS</a>
+                    <ul class = "nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/setup/index.html">Setup</a></li>
+                        <li><a href="/equipment/index.html">Equipment List</a></li>
+                        <li><a href="/lab/index.html">Lab Work</a></li>
+                        <li><a href="/links/index.html">Links</a></li>
+                        <li><a href="/papers/index.html">Papers</a></li>
+                        <li><a href="/TeamDocs/index.html">Team Docs</a></li>
+                        <li><a href="/ec551/index.html">EC551</a></li>
+                        <li><a href="/iGEM/index.html">iGEM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Overall Goal: Increase performance as defined by a ratio of blood focusing to electrical energy</p>
+<p>Two approaches:<br>  1. Engineering: Taguchi<br>  2. Science: Predictive Model Validation</p>
+<h1>Short-term milestones (6-weeks):</h1>
+<ol>
+<li>Deliver a robust experimental design</li>
+<li>Run the same model validation experiment using a chip that I fabricated with the previously utilized dimensions</li>
+</ol>
+<h3>Short-term milestone details:</h3>
+<ol>
+<li>Complete Experimental Design - Goal is to determine most robust design using a parametric study that requires the least amount of individual experiments<ul>
+<li>Taguchi Design of Experiments (DoE) technique<ul>
+<li>Reduces number of experiments vs One Factor at a Time (OFAT) by using orthogonal arrays of control parameter variations.<ul>
+<li>Example: 4 factors executed at 3 levels per factor will require only 9 experiments instead of 3^4=81</li>
+</ul>
+</li>
+<li>Data collected from experiments is entered into the mathematical formalism of statistical experimental design and a S/N ratio is produced for each factor, ultimately resulting in the best combination of controllable factors.</li>
+<li>Weaknesses:<ol>
+<li>Goal is NOT to characterize the system, rather the goal is to achieve robust function (1269...). This is an engineering practice, rather than a scientific practice in that it emphasizes performance over explanatory power.</li>
+<li>A critical assumption in the construction of the orthogonal arrays is that factors do not interact.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Deliverables:<ol>
+<li>Design of experiments<ul>
+<li>Specify factors (chip geometries) and levels (quantify number and incremental value of variations per factor)</li>
+</ul>
+</li>
+<li>Data-backed estimate on time/resources necessary to complete DoE<ul>
+<li>This will involve performing at least one complete design-fabrication-assemble-run-measure cycle and measuring the time to completion. Extrapolate this value by the number of experiments required as determined by the orthogonal array.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Characterize fabrication technology - Precision in fabrication is more important than accuracy for performing a Taguchi DoE, but for model validation accuracy is important, assuming a high cost to run the model for different parameters.<ul>
+<li>Deliverable (either one of the following):<ul>
+<li>One model validation experiment using a chip with measured dimensions, the measurements of which are fed into the model (accuracy is a problem)</li>
+<li>One model validation using standard dimensions with validated chip</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1>Long Term Goals (6 months):</h1>
+<ol>
+<li>Engineering (performance-based) approach: Discover parameters that most affect SN ratio, as defined by the Taguchi Method. Experimentally verify best predicted combination.</li>
+<li>Scientific (explanatory) approach: Validate model by confirming experimental conditions with best predicted performance.</li>
+<li>Compare results between approaches</li>
+</ol>
+
+        </div>
+    </body>
+</html>
