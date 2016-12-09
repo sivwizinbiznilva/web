@@ -879,3 +879,8 @@ then a catastrophic failure of confidentiality results, since:
 #FPGA Architecture
 - [FPGA Routing Structures: A Novel Switch Block](/papers/masud1998.pdf)
   - ![architecture](/papers/fpgaArch.png)
+
+# Acoustophoresis
+-[Acoustofluidic bacteria separation](/papers/li2016.pdf)
+  - SAW Separation
+    - Cites low throughput
