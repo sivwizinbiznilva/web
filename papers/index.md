@@ -885,3 +885,6 @@ then a catastrophic failure of confidentiality results, since:
   - SAW Separation
     - Cites low throughput
 -[Continuous acoustic separation in a thermoplastic microchannel](/papers/mueller2013.pdf)
+
+# My papers
+- [A reconfigurable continuous-flow fluidic routing fabric using a modular, scalable primitive](/papers/silva2016.pdf)
