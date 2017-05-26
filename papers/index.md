@@ -888,3 +888,4 @@ then a catastrophic failure of confidentiality results, since:
 
 # My papers
 - [A reconfigurable continuous-flow fluidic routing fabric using a modular, scalable primitive](/papers/silva2016.pdf)
+  - [CoSyn: Efficient Single-Cell Analysis Using a Hybrid Microfluidic Platform](/papers/ibrahim2017.pdf)
