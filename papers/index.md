@@ -890,3 +890,4 @@ then a catastrophic failure of confidentiality results, since:
 - [A reconfigurable continuous-flow fluidic routing fabric using a modular, scalable primitive](/papers/silva2016.pdf)
   - [CoSyn: Efficient Single-Cell Analysis Using a Hybrid Microfluidic Platform](/papers/ibrahim2017.pdf)
 - [Rapid prototyping and parametric optimization of plastic acoustofluidic devices for blood-bacteria separation](/papers/silva2017.pdf)
+  - [Supplementary Material](/papers/SupplementaryMaterial.pdf)
